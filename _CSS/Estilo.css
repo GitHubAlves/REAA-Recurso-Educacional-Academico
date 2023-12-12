@@ -7,7 +7,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Titillium+Web:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
 
 
 
@@ -190,7 +190,6 @@ footer#rodape p {
     padding-bottom: 10px;
     border-top: 2px solid rgb(141, 140, 140, 0.9);
     text-align: center;
-
 }
 
 article#MainTitle h2 {
@@ -202,8 +201,9 @@ article#MainTitle h2 {
 }
 
 hgroup#logo-cabecalho {
-    width: 100px;
-    padding: 30px 0px 0px 0px;   
+    font-size: 80px;
+    padding: 40px 0px 0px 0px;   
+    font-family: 'Montserrat', sans-serif;
     
 }
 
