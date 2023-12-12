@@ -12,7 +12,7 @@
 
 
 body {
-    background-color: rgba(186, 186, 183, 0.7);
+    background-color: rgba(221, 221, 216, 0.7);
     color: rgb(13, 13, 13);
 }
 
@@ -31,7 +31,7 @@ div#interface {
 
 header#cabecalho {
     position: relative;
-    border-bottom: 2px rgb(81, 81, 82) solid;
+    border-bottom: 1px rgb(81, 81, 82) solid;
     width: -90px;
     /*background: url("../_IMAGENS/REAA-Logo001.PNG") no-repeat 1px 0px;*/
     padding: 10px;
@@ -73,9 +73,8 @@ position: relative;
     font-family: 'Titillium Web', sans-serif;
     font-family: monospace;
     color: rgb(195, 193, 193);
-    margin-bottom: 50px;
-    margin:auto;
-
+    margin: auto;
+    padding-left: 400px;    
 }
 
 hgroup#saudacoes h4 {
@@ -135,11 +134,11 @@ figure.Foto-Relogio:hover figcaption {
 /*foramtação menu e tudo que ul será*/
 
 nav#menu ul {
-    position: absolute;
-    list-style: none;
+    position: absolute;   
+    /*list-style: none;*/
     top: -10px;
-    left: 785px;
-    font-family:'Titillium Web', sans-serif;
+    left: 700px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 /*Sempre que for um id a chamada do estilo é um #*/
@@ -147,13 +146,13 @@ nav#menu ul {
 nav#menu li {
     display: inline-block;
     /*menu horizontal*/
-    background-color: rgb(193, 189, 189);
-    /*padding:10px;*/
-    margin: 3px;
+    background-color: rgb(231, 228, 228);
+    padding:5px 2px 2px 5px;
+    margin: 1px -10px 0px 1px;
 }
 
 nav#menu li:hover {
-    background-color: rgb(92, 91, 91);
+    background-color: rgb(206, 204, 204);
 }
 
 nav#menu a {
@@ -198,13 +197,13 @@ article#MainTitle h2 {
     font-size: 12pt;
     color: rgb(66, 65, 65);
     background-color: rgba(73, 72, 72, 0.4);
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0px 5px 5px;
     margin: 10px 0px 10px 0px;
 }
 
 hgroup#logo-cabecalho {
-    width: 400px;
-    padding: 0px 0px 0px 0px;
+    width: 100px;
+    padding: 30px 0px 0px 0px;   
     
 }
 
