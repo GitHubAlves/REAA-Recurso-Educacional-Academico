@@ -3,9 +3,12 @@
 @font-face {
     font-family: 'Fonte-Logo';
     src: url("../_Fontes/bubblegum-sans-regular.otf");
+    src: url("../_Fontes/Dosis/Dosis-VariableFont_wght.ttf");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
 
 
 body {
@@ -27,10 +30,11 @@ div#interface {
 
 
 header#cabecalho {
-    border-bottom: 1px rgb(81, 81, 82) solid;
-    height: 150px;
-    background: url("../_IMAGENS/REAA-Logo.PNG") no-repeat 0px 60px;
-
+    position: relative;
+    border-bottom: 2px rgb(81, 81, 82) solid;
+    width: -90px;
+    /*background: url("../_IMAGENS/REAA-Logo001.PNG") no-repeat 1px 0px;*/
+    padding: 10px;
 }
 
 header#cabecalho h1 {
@@ -54,11 +58,32 @@ header#cabecalho h6 {
     margin-left: 50px;
 }
 
-hgroup#saudacoes h3 {
+hgroup#saudacoes h2 {
 
     font-family: 'Titillium Web', sans-serif;
-    color: gray;
-    padding: 0px;
+    font-family: monospace;
+    color: rgb(132, 130, 130);
+    margin-bottom: -15px;
+    
+
+}
+
+hgroup#saudacoes h5{
+position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: monospace;
+    color: rgb(195, 193, 193);
+    margin-bottom: 50px;
+    margin:auto;
+
+}
+
+hgroup#saudacoes h4 {
+
+    font-family: 'Titillium Web', sans-serif;
+    font-family: monospace;
+    color: rgb(203, 199, 199);
+    margin-bottom: 80px;
 
 }
 
@@ -77,8 +102,6 @@ figure.Foto-Relogio {
     box-shadow: 1px 1px 10px black;
     width: 50%;
     height: 50%;
-
-
 }
 
 figure.Foto-Relogio img {
@@ -89,6 +112,8 @@ figure.Foto-Relogio img {
 
 /*Formatação de estilo para a figura do relogio*/
 figure.Foto-Relogio figcaption {
+    opacity: 0;
+
     position: absolute;
     top: 0px;
     background-color: rgba(0, 0, 0, .4);
@@ -97,7 +122,12 @@ figure.Foto-Relogio figcaption {
     height: 100%;
     padding: 10px;
     box-sizing: border-box;
+    transition: opacity 1s;
 
+}
+
+figure.Foto-Relogio:hover figcaption {
+    opacity: 1;
 }
 
 /*formatação do menu*/
@@ -105,11 +135,11 @@ figure.Foto-Relogio figcaption {
 /*foramtação menu e tudo que ul será*/
 
 nav#menu ul {
-    position: relative;
+    position: absolute;
     list-style: none;
-    top: 20px;
-    left: 780px;
-    font-family: 'Montserrat', sans-serif;
+    top: -10px;
+    left: 785px;
+    font-family:'Titillium Web', sans-serif;
 }
 
 /*Sempre que for um id a chamada do estilo é um #*/
@@ -117,9 +147,9 @@ nav#menu ul {
 nav#menu li {
     display: inline-block;
     /*menu horizontal*/
-    background-color: rgb(181, 177, 177);
+    background-color: rgb(193, 189, 189);
     /*padding:10px;*/
-    margin: 2px;
+    margin: 3px;
 }
 
 nav#menu li:hover {
@@ -127,13 +157,13 @@ nav#menu li:hover {
 }
 
 nav#menu a {
-    color: rgb(30, 30, 30);
+    color: rgb(124, 122, 122);
     text-decoration: none;
 }
 
 nav#menu a:hover {
     color: rgb(245, 241, 241);
-    text-decoration: underline;
+    
 }
 
 section#corpo {
@@ -155,19 +185,26 @@ aside#Lateral {
 
 }
 
-footer#rodape p{
+footer#rodape p {
     clear: both;
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 2px solid rgb(141, 140, 140, 0.9);
     text-align: center;
-   
+
 }
 
-article#MainTitle h2{
+article#MainTitle h2 {
     font-size: 12pt;
     color: rgb(66, 65, 65);
     background-color: rgba(73, 72, 72, 0.4);
     padding: 5px 0px 5px 0px;
     margin: 10px 0px 10px 0px;
 }
+
+hgroup#logo-cabecalho {
+    width: 400px;
+    padding: 0px 0px 0px 0px;
+    
+}
+
