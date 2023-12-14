@@ -27,7 +27,9 @@ div#interface {
 
 }
 
-
+video#not-supported br{
+    background-color: rgb(228, 119, 17);
+}
 
 
 header#cabecalho {
