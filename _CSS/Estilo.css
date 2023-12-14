@@ -170,19 +170,11 @@ section#corpo {
     display: block;
     width: 550px;
     float: left;
-    border-right: 1px solid gray;
+    border-right: 1px solid rgb(136, 133, 133);
     padding-right: 15px;
     padding-left: 10px;
 }
 
-aside#Lateral {
-    display: block;
-    float: right;
-    width: 350px;
-    padding-right: 35px;
-
-
-}
 
 footer#rodape p {
     clear: both;
@@ -207,17 +199,39 @@ hgroup#logo-cabecalho {
     
 }
 
-aside#Lateral{
-    background-color: hwb(180 78% 21%);
-    margin: 15px 20px 15px 15px;
-    height: auto;
 
+
+
+aside#Lateral {
+    background-color: rgb(252, 252, 252);
+    display: block;
+    float: right;
+    width: 400px;
+    height: auto;
+    /*padding: 5px 2px 0px 0px;*/
+    margin: 5px 15px 2px 5px;      
 }
+
+
 
 aside#Lateral h4{
     font-size: 12pt;
-    color: rgb(66, 65, 65);
-    
+    color: rgb(66, 65, 65);    
     padding: 5px 0px 5px 5px;
     margin: 10px 0px 10px 0px;
+}
+
+
+
+article#div-lateral h4{
+    font-size: 12pt;
+    color: rgb(66, 65, 65);
+    background-color: rgba(73, 72, 72, 0.4);
+    padding: 5px 0px 5px 5px;
+    margin: 10px 0px 10px 0px;
+}
+
+article#div-lateral p{
+
+    margin: 5px 5px 5px 5px;
 }
