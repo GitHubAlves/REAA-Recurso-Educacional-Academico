@@ -162,7 +162,21 @@ aside#Lateral p{
     margin: 10px -20px 10px -30px;
 }
 
-img#IntroducaoC img{
+ul#Lista-Aulas{
+width: 700px;
+margin: 0 auto;
+padding: 50px;
+overflow: hidden;
+list-style: none;    
+}
 
-    width: 500;
+ul#Lista-Aulas li{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border:5px solid rgb(156, 153, 153);
+    background-color: rgb(217, 212, 212);
+    box-shadow: 1px 1px 3px rgba(187, 100, 100, 0.4);
+   
 }
