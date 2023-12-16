@@ -175,8 +175,25 @@ ul#Lista-Aulas li{
     width: 200px;
     height: 200px;
     margin: 10px;
-    border:5px solid rgb(156, 153, 153);
-    background-color: rgb(217, 212, 212);
-    box-shadow: 1px 1px 3px rgba(187, 100, 100, 0.4);
-   
+    border:3px solid rgba(172, 168, 168, 0.4);
+    background-color: rgb(249, 245, 245);
+    box-shadow: 1px 1px 3px rgba(183, 181, 181, 0.4);   
 }
+ul#Lista-Aulas li#Introducao-ao-C{
+    background: url('../_IMAGENS/intrudução\ a\ C++.png');
+}
+
+ul#Lista-Aulas li#instrucoes-de-controle{
+    background: url('../_IMAGENS/fluxograma.png');
+}
+ul#Lista-Aulas li#Funcoes{
+    background: url('../_IMAGENS/funcao.png');   
+}
+
+ul#Lista-Aulas li#Ponteiro-vs-Endereco{
+    background: url('../_IMAGENS/PonteiroVSEndereço.png');   
+}
+
+
+
+
