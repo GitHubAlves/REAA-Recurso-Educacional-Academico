@@ -260,7 +260,7 @@ ul#Lista-Aulas li#Classes {
 ul#Lista-Aulas li#Heranca {
     background: url('../_IMAGENS/Herança.png');
     background-position: 50% 50%;
-    background-size: 150px 150px;
+    background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
@@ -344,7 +344,7 @@ ul#Lista-Aulas li#Classificacao {
 ul#Lista-Aulas li#Estrutura-de-dados {
     background: url('../_IMAGENS/EstruturaDados.png');
     background-position: 50% 50%;
-    background-size: 300px 300px;
+    background-size: 200px 200px;
 }
 
 ul#Lista-Aulas li#bits {
@@ -357,5 +357,6 @@ ul#Lista-Aulas li#bits {
 ul#Lista-Aulas li#Sistemas-embarcados {
     background: url('../_IMAGENS/embarcados.png');
     background-position: 50% 50%;
-    background-size: 300px 300px;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
 }
