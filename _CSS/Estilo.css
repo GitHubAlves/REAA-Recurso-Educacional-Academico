@@ -177,6 +177,20 @@ section#corpo {
     padding-left: 10px;
 }
 
+section#conf-aulas {
+    /*ser motrada como um block*/
+    display: block;
+    width: 750px;
+    padding-right: 0px;
+    padding-left: 100px;
+}
+
+div#divclass p{
+    
+    text-align: auto;
+    
+}
+
 aside#Lateral {
     display: block;
     float: right;
@@ -200,6 +214,14 @@ article#MainTitle h2 {
     background-color: rgba(73, 72, 72, 0.4);
     padding: 5px 0px 5px 5px;
     margin: 10px 0px 10px 0px;
+}
+
+article#Config-Classes h2 {
+    font-size: 12pt;
+    color: rgb(66, 65, 65);
+    background-color: rgba(73, 72, 72, 0.4);
+    padding: 5px 0px 5px 5px;
+    margin: 5px 45px 5px 5px;
 }
 
 hgroup#logo-cabecalho {
@@ -229,4 +251,8 @@ aside#Lateral p{
     
     padding: 5px 0px 5px 5px;
     margin: 10px -20px 10px -30px;
+}
+
+div#divclass{
+    font-family: 'Montserrat', sans-serif;
 }
