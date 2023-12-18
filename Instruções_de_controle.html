@@ -70,7 +70,7 @@
                 <p>
                     O controle de decição mais simples e mais usado é o <em>if(..condição..)</em>. È sem dúvida
                     o controle mais diário que temos em nossas vidas <br>
-                    Ex: <em>"Se caso ele não vier, então eu não vou"</em> <br>
+                    Ex: <em>"Se ele não vier, então eu não vou"</em> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>"Se estiver chovendo, então eu levo guarda-chuva"</em><br>
                     E, assim segue o baile.
                 </p>
@@ -98,20 +98,19 @@
                 </p>
                 <p>
                     Na primeira forma, vemos o bloco de código abaixo do if formatado com um tab a direita
-                    e isso significa que, se a condição estabelicida como argumento dentro dos parenteses do if, não for
+                    e isso significa que, se a condição estabelicida como argumento dentro dos parenteses do if, for
                     verdadeira,
                     a primeira linha após o if será executada, senão a segunda linha será executada. E isso tanto faz
-                    para a segunda forma representada
-                    abaixo.
+                    para a primeira ou segunda forma representada no trecho de código acima.
                 </p>
                 <p>
                     A condição que é estabelicida dentro do if é sempre verdadeira, ou seja o compilador sempre vai
-                    analizar se ela é verdadeira.
+                    analizar se é TRUE.
                 </p>
                 <p>
                     Porém! quando, há necessidade de mais de uma linha de código, caso a condição for verdadeira. Ela
                     será delimitadade dentro de chaves
-                    como segue o exemlo abaixo.
+                    como segue o exemplo abaixo.
                 </p>
                 <pre>
                     <code>
@@ -183,7 +182,7 @@
                 </p>
                 <pre>
                     <code>
-                        #include &lt;iostream&lt;
+                        #include &lt;iostream&gt;
                             using namespace std;                            
                             int main()
                             {
@@ -202,6 +201,137 @@
                                     cout&lt;&lt;"Nao foi desta vez"&lt;&lt;endl;
                                 return 0;
                             }
+                    </code>
+                   </pre>
+                <b>Estrutura básica do código switch..case</b>
+                <p>
+                    Dentro do conceito de instruçoes de controle, temos ainda o switch-case. Ele faz um chaveamento da
+                    condição que está dentro
+                    dos parenteses do switch com os <em>case</em> que formam o bloco de intruções, e os <em>break</em>
+                    faz pular fora de todo o switch. Esperimente jogar o
+                    código abaixo
+                    no code-blocks para ver o resultado.
+                </p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                            using namespace std;
+
+                            int main()
+                            {
+                                cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                                int A=0;
+                            
+                                cout&lt;&lt;"insira um valor inteiro:";
+                                cin&gt;&gt;A;
+                            
+                                switch(A)
+                                {
+                                case 8:
+                                     cout&lt;&lt;"Vc digitou 8"&lt;&lt;endl;
+                                    break;
+                                case 5:
+                                    cout&lt;&lt;"Vc digitou 5"&lt;&lt;endl;
+                                    break;
+                                case 7:
+                                    cout&lt;&lt;"Vc digitou 7"&lt;&lt;endl;
+                                    break;
+                                default:
+                                    cout&lt;&lt;"nenhuma condicao"&lt;&lt;endl;
+                                }
+                            
+                                return 0;
+                            }
+                            
+                    </code>
+                   </pre>
+                <p>O mesmo pode ser feito com caracteres em vez de número:</p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                            using namespace std;
+
+                            int main()
+                            {
+                                cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                                char A='\0';
+                            
+                                cout&lt;&lt;"insira um valor inteiro:";
+                                cin&gt;&gt;A;
+                            
+                                switch(A)
+                                {
+                                 <em>case 'A': </em>
+                                 <em>case 'a':</em>
+                                     cout&lt;&lt;"Vc digitou A ou a"&lt;&lt;endl;
+                                    break;
+                                 <em>case '5':</em>
+                                    cout&lt;&lt;"Vc digitou 5"&lt;&lt;endl;
+                                    break;
+                                 <em>case 'B':</em>
+                                 <em>case 'b':</em>
+                                    cout&lt;&lt;"Vc digitou B ou b"&lt;&lt;endl;
+                                    break;
+                                default:
+                                    cout&lt;&lt;"nenhuma condicao, entendeu a grande utilidade do dafault?"&lt;&lt;endl;
+                                }
+                            
+                                return 0;
+                            }
+                            
+                    </code>
+                   </pre>
+                <b>Apenas intruções de controle não deixamnosso código eficaz</b>
+                <p>
+                    Apenas instrucoes-de-controle não basta para deixar um programa otimizados e robusto. Você precisa
+                    usar os laços de repetição para monitorar, condições até que elas sejam aceitas ou que sejam capazes
+                    de calcular
+                    <em>n vezes</em> a nível do clock da máquina;
+                </p>
+                <p>
+                    Vamos começar com o laço de repetição <em>for()</em> que sem dúvidas alpém de ser mais fácil, 
+                    é dele que deriva os outros laços de repetição.
+                </p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                            using namespace std;
+
+                            int main()
+                            {
+                                cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+
+                                for(int =0; i&lt;10; i++)
+                                {
+                                    cout &lt;&lt; "REAA"&lt;&lt; endl;
+                                }                               
+                            
+                                return 0;
+                            }
+                            
+                    </code>
+                   </pre>
+                   <figure class="Foto-Relogio">
+                    <img src="_IMAGENS/Resultado_laco_for.PNG" />
+                    <figcaption>
+                        <h5>
+                            Console do code-blocks <br>
+                            A string REEA, é mostrado 10x
+                        </h5>
+                    </figcaption>
+                </figure>
+                <p>
+                    Vamos agora de alulo para aluno, examinar o laço for(). Dentro do laço temos <em>inicialização; condição; passo</em>
+                    isso siginifica que ao usar o laço for devemos seguir esta semãntica (estudo do significado).
+                    Em portugol, paa quem já viu ou sabe do que se trata ficaria assim.                    
+                </p>
+                <pre>
+                    <code>
+                        para (inicialização: Condição; passo)
+                          corpo ou bloco
+                        fimpara
+                        
+                        próxima instrução
                     </code>
                    </pre>
             </div>
