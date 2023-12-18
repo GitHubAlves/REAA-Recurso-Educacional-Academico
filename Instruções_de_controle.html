@@ -36,21 +36,168 @@
 
             <div id="divclass">
                 <hgroup id="saudacoes">
-                    <h2>Instruções de controle</h2>                    
-                </hgroup>                
+                    <h2>Instruções de controle</h2>
+                </hgroup>
                 <p>
-                <br>
+                    <br>
                 <p>
-                    Introdução
+                    Antes de escrever um programa de computador, é preciso entender o problema requerido.Ficar atento a
+                    lógica que será usada
+                    para criar um mecanismo específico que apresenta o resultado esperado.
+                    E para isto! muitas vezes precisamos criar blocos de controle de decisão ou blocos que se repetem
+                    até uma daterminada condição seja atingida.
                 </p>
                 <p>
-                    Dsenvolvimento
-                </p>
-                <p>
-                    Conclusao+ aplicação
-                </p>
+                    Em todas as linguagens de programação, existem as instruções de controle. E são elas,<br>
+                    <b>Controle de decição: </b><br>
+                    <em> if() </em><br>
+                    <em></em> if..else </em><br>
+                    <em></em> if..else if..else if..else </em><br>
+                    <em> switch..case </em><br>
+                    <b> Controle de repetição(famosos loop's):</b> <br>
+                    <em> for() </em><br>
+                    <em> while() </em><br>
+                    <em>do..while() </em><br>
+                    </pre>
 
-                
+                </p>
+                <p>
+                    O controle de decição mais simples e mais usado é o <em>if(..condição..)</em>. È sem dúvida
+                    o controle mais diário que temos em nossas vidas <br>
+                    Ex: <em>"Se caso ele não vier, então eu não vou"</em> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>"Se estiver chovendo, então eu levo guarda-chuva"</em><br>
+                    E, assim segue o baile.
+                </p>
+                <b>Estrutura básica do código if(..condição..).</b>
+                <p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+                        int main()
+                        {
+                            if(..coondição..)
+                              ..bloco de código se <b>caso a condição for verdadeira</b>..
+                        ..bloco de codigo, <b>caso não seja a condição esperada</b> ..
+                                     
+                                         OU
+                        if(..coondição..)
+                        ..bloco de código se <b>caso a condição for verdadeira</b>..
+                        ..bloco de codigo, <b>caso não seja a condição esperada</b> ..
+                            
+                            return 0;
+                        }
+                    </code>
+                   </pre>
+                </p>
+                <p>
+                    Na primeira forma, vemos o bloco de código abaixo do if formatado com um tab a direita
+                    e isso significa que, se a condição estabelicida como argumento dentro dos parenteses do if, não for
+                    verdadeira,
+                    a primeira linha após o if será executada, senão a segunda linha será executada. E isso tanto faz
+                    para a segunda forma representada
+                    abaixo.
+                </p>
+                <p>
+                    A condição que é estabelicida dentro do if é sempre verdadeira, ou seja o compilador sempre vai
+                    analizar se ela é verdadeira.
+                </p>
+                <p>
+                    Porém! quando, há necessidade de mais de uma linha de código, caso a condição for verdadeira. Ela
+                    será delimitadade dentro de chaves
+                    como segue o exemlo abaixo.
+                </p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+                        int main()
+                        {
+                            if(..coondição..)
+                            {
+                              ..bloco 1 de código se <b>caso a condição for verdadeira</b>..
+                              ..bloco 2 de código se <b>caso a condição for verdadeira</b>..
+                              ..bloco n de código se <b>caso a condição for verdadeira</b>..
+                            }
+                        ..bloco de codigo, <b>caso não seja a condição esperada</b> ..
+                                     
+                            
+                            return 0;
+                        }
+                    </code>
+                   </pre>
+
+                <b>Estrutura básica do código if-else</b>
+                <p>
+                    Existe a condição <b>else</b> para representar o "senão", mas para o caso acima é opcional. Já que o
+                    compilador entenderá que, se nenhuma das opções dentro do if é verdadeira, então vou executar o que
+                    está do lado
+                    de fora.
+                </p>
+                <p>
+                    O else tem uma utilidade muito forte para exercer uma condição de <em>default</em> para mencionar ao
+                    usuário uma menssaem de
+                    erro.
+                </p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+                        int main()
+                        {
+                            if(..condição..)
+                            {
+                              ..bloco 1 de código se <b>caso a condição for verdadeira</b>..
+                              ..bloco 2 de código se <b>caso a condição for verdadeira</b>..
+                              ..bloco n de código se <b>caso a condição for verdadeira</b>..
+                            }
+                           <b>else</b>
+                              cout&lt;&lt;"Algo deu errado, jovem"&lt;&lt;endl;
+                                     
+                            
+                            return 0;
+                        }
+                    </code>
+                   </pre>
+                <b>Estrutura básica do código if..else if..else if..else</b>
+                <p>
+                    Quando se usa apenas um if, não tem o porque usar o else afinal seja prático e simples no seu
+                    código.
+                    Veremos agora uma cascata de <em>if..else if..else</em> em C++. A baixo tem um código didático,
+                    representando
+                    uma cascata de condições
+                    if-else. Começando com uma variável 'A' do tipo de dado inteiro e atribuindo um valor 4 do
+                    mesmo tipo.
+                    vamos ter em mente que: <br>
+                    <br>
+                    1° O comilador sempre vai analizar o primeiro if, depois o segundo e assim por diante. <br>
+                    2° O compilador sempre vai esperar que a condição seja verdadeira, e não que seja falsa.
+                    por isso, se caso precisa que um bloco de código seja executado caso a seja falsa, deverá usar
+                    o operador de negação '&#33;' (exclamação), tente você mesmo.
+                </p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&lt;
+                            using namespace std;                            
+                            int main()
+                            {
+                                cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+                                int A=4;
+                            
+                                if(A==4)
+                                    cout&lt;&lt;"4"&lt;&lt;endl;
+                               <b>else if</b>(A==3)
+                                    cout&lt;&lt;"3"&lt;&lt;endl;
+                               <b>else if</b>(A==2)
+                                    cout&lt;&lt;"2"&lt;&lt;endl;
+                               <b>else if</b>(A==1)
+                                    cout&lt;&lt;"1"&lt;&lt;endl;
+                                else
+                                    cout&lt;&lt;"Nao foi desta vez"&lt;&lt;endl;
+                                return 0;
+                            }
+                    </code>
+                   </pre>
             </div>
         </section>
 
