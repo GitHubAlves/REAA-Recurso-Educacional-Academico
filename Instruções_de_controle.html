@@ -281,7 +281,7 @@
                             
                     </code>
                    </pre>
-                <b>Apenas intruções de controle não deixamnosso código eficaz</b>
+                <b>Apenas intruções de controle não deixam nosso código eficaz...laço for()</b>
                 <p>
                     Apenas instrucoes-de-controle não basta para deixar um programa otimizados e robusto. Você precisa
                     usar os laços de repetição para monitorar, condições até que elas sejam aceitas ou que sejam capazes
@@ -289,29 +289,25 @@
                     <em>n vezes</em> a nível do clock da máquina;
                 </p>
                 <p>
-                    Vamos começar com o laço de repetição <em>for()</em> que sem dúvidas alpém de ser mais fácil, 
-                    é dele que deriva os outros laços de repetição.
+                    Vamos começar com o laço de repetição <em>for()</em> que sem dúvidas, além de ser mais fácil,
+                    é com ele que entendemos melhor os outros loops. <br>
+                    O for é frequentemente utilizado quando o número de iterações é conhecido antecipadamente ou quando
+                    é necessário iterar sobre uma sequência específica de valores. A inicialização ocorre uma vez no
+                    início, a condição é avaliada a cada iteração, e a expressão de incremento/decremento é executada
+                    após cada iteração.
                 </p>
-                <pre>
-                    <code>
-                        #include &lt;iostream&gt;
-                            using namespace std;
 
-                            int main()
-                            {
-                                cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                <figure class="Foto-Relogio">
+                    <img src="_IMAGENS/Pseudocodigo.PNG" />
+                    <figcaption>
+                        <h5>
+                            Demostração dos parametros <br>
+                            do laço for()
+                        </h5>
+                    </figcaption>
+                </figure>
 
-                                for(int =0; i&lt;10; i++)
-                                {
-                                    cout &lt;&lt; "REAA"&lt;&lt; endl;
-                                }                               
-                            
-                                return 0;
-                            }
-                            
-                    </code>
-                   </pre>
-                   <figure class="Foto-Relogio">
+                <figure class="Foto-Relogio">
                     <img src="_IMAGENS/Resultado_laco_for.PNG" />
                     <figcaption>
                         <h5>
@@ -320,10 +316,12 @@
                         </h5>
                     </figcaption>
                 </figure>
+
+
                 <p>
-                    Vamos agora de alulo para aluno, examinar o laço for(). Dentro do laço temos <em>inicialização; condição; passo</em>
-                    isso siginifica que ao usar o laço for devemos seguir esta semãntica (estudo do significado).
-                    Em portugol, paa quem já viu ou sabe do que se trata ficaria assim.                    
+                    Vamos agora de aluno para aluno, examinar o laço <em>for()</em>. Este tipo de controle em forma de
+                    repetição carrega como argumento(o que vai dentro dos parênteses) três
+                    parâmetros(valores de entrada que definem a função) separados por ponto e virgula "&#59;".
                 </p>
                 <pre>
                     <code>
@@ -334,6 +332,170 @@
                         próxima instrução
                     </code>
                    </pre>
+                <p>
+                    Você pode omitir a inicialização de dentro do laço, mas deverá declarar ele fora do laço e antes
+                    dele. Lembrando
+                    que toda linguagem de programação é compilada de cima para baixo e da direita para esquerda.
+                    Então se não declarar a variavel antes, ocorrerá erro de sintaxe no código. <br>
+                    &#10004;inicialização, usado para dar a condição de onde quer começar a contar ou iniciar os
+                    cálculos. <br>
+                    &#10004;codição, uma condição é o que determina a essencia da do trexo de código. <br>
+                    &#10004;passo, é a expressão que determina que será feito a cada passo que é repetido, normalmente é
+                    usado
+                    a expressão de incrimento ou decremento.
+
+                </p>
+                <p>
+                    Você pode utilizar de muitas formas a parte de <em>condição</em>, podendo utiliar conceitos de
+                    relação entre dois valores
+                    ou até mesmo criar um laço infinito deixando em branco os parâmetros.
+                <pre>
+                    <code>
+                        for(int i=0; i!=44; i++)
+                        for( ; ;)
+                        for(int i=100; i!=0; i--) 
+                    </code>
+                   </pre>
+                </p>
+                <b>Apenas intruções de controle não deixam nosso código eficaz..laço while()</b>
+                <p>
+                    O laço while é outra maneira de controlar um bloco de código que precisa ser verificado até que a
+                    condição seja verdadeira
+                    ou que seja preciso calcular um valor repetidas vezes. O while é usado quando a condição para
+                    continuar o loop não é conhecida antecipadamente e pode depender de entradas do usuário ou de
+                    cálculos dentro do próprio loop. A condição é avaliada antes de cada iteração, e o loop continua
+                    enquanto a condição for verdadeira.
+                </p>
+                <pre>
+                    <code>
+                        while (condição) {
+                           ...código a ser repetido
+                        }
+                        <br>
+                        ou
+                        <br>
+                        int i = 1;
+                        while (i <= 5) {
+                            ...Código a ser repetido
+                            ++i;
+                        }
+                        
+                    </code>
+                   </pre>
+                <h4>Exemplo:</h4>
+                <figure class="Foto-Relogio">
+                    <img src="_IMAGENS/while02.PNG" />
+                    <figcaption>
+                        <h5>
+                            Console do code-blocks <br>
+                            A string REEA, é mostrado 10x
+                        </h5>
+                    </figcaption>
+                </figure>
+                <p>
+                    Observa que como parâmetro do while é uma negação. Ou seja, sairei do código somente se eu digitar
+                    's' para sair e qualquer
+                    outra tecla que eu bater, ficarei preso dentro do código testando inúmeras vezes meu comando
+                    switch-case. O comando system("CLS")
+                    é utilizado para limpar a tela do console. Experimente você mesmo.
+                </p>
+
+                <b>Apenas intruções de controle não deixam nosso código eficaz..laço do-while();</b>
+                <p>
+                    O do-while é outra estrutura de controle de fluxo em C++ usada para implementar loops (laços de
+                    repetição). Ele é semelhante ao while, mas com uma diferença crucial: no do-while, a condição é
+                    avaliada após a execução do bloco de código, garantindo que o bloco seja executado pelo menos uma
+                    vez, independentemente da condição inicial.
+                </p>
+                <pre>
+                    <code>
+                        do {
+                            ..código a ser repetido
+                        } while (condição);
+                    </code>
+                   </pre>
+                <p>
+                    O propósito do-while é útil quando o bloco de código precisa ser executado pelo menos uma vez, e a
+                    verificação
+                    da condição pode ser feita após a execução. Isso é especialmente útil em situações em que é
+                    necessário garantir que um bloco de código seja executado antes mesmo de verificar uma condição.
+                    exemplo de uso muito comun, é a criação de um menu, ao qual é peciso que rode ao menos uma vez antes
+                    de solicitar
+                    a opção.
+                </p>
+                <h4>Exemplo:</h4>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+
+                            using namespace std;
+                            
+                            int main()
+                            {
+                                cout &lt;&lt; "Hello REAA" &lt;&lt; endl;
+                                int sair=0;
+                                int op=0;
+                                do
+                                {
+                                    cout&lt;&lt;"[1]opcao A"&lt;&lt;endl;
+                                    cout&lt;&lt;"[2]opcao B"&lt;&lt;endl;
+                                    cout&lt;&lt;"[3]opcao C"&lt;&lt;endl;
+                                    cin>>op;
+                                    system("CLS");
+                                }
+                                while(op!=1 && op!=2 && op!=3);
+                                cout&lt;&lt;"vc optou por["&lt;&lt;op&lt;&lt;"]"&lt;&lt;endl;
+                            
+                                return 0;
+                            }                            
+                    </code>
+                   </pre>
+                <p>
+                    O código acima, mostra um exemplo de um menu iterativo. Dentro do argumento while tem três condiçoes
+                    que obriga o usuário a digitar infinitamente uma das opções, fazendo uso do operador lógico
+                    <em>&&(and)</em>
+                    determino que a variavel <em>op</em> será 1, 2 ou 3. Eu sei! você acha que deveria ser o operador
+                    lógico <em>||(ou)</em>
+                    .Tenta você mesmo, nada melhor que treinar para aprender. O lance, desse menu acima é que a variável
+                    <em>op</em>
+                    sai do laço já atribuído com o valor escolhido, legal néh?
+                </p>
+                <hgroup id="saudacoes">
+                    <h2>Conclusões finais</h2>
+                </hgroup>
+                <p>
+                    Instruções de controle em laços de repetição são essenciais para criar fluxos de execução flexíveis
+                    e dinâmicos em programas. Os laços de repetição, como for, while e do-while, permitem que um bloco
+                    de código seja executado repetidamente enquanto uma condição específica é atendida. A utilização de
+                    instruções de controle nesses laços serve a diversas finalidades:
+                </p>
+                <b> Automatização de Tarefas: </b><br>
+                <p>
+                    Permite a automação de tarefas repetitivas, onde o mesmo conjunto de operações precisa ser executado
+                    várias vezes.
+                </p>
+
+                <b>Manipulação de Dados em Massa:</b><br>
+                <p>
+                    Facilita o processamento de grandes conjuntos de dados, permitindo que operações sejam aplicadas a
+                    cada elemento do conjunto.
+                </p>
+
+                <b>Iteração sobre Sequências:</b><br>
+                <p>
+                    Possibilita a iteração sobre sequências, como arrays ou listas, para processar cada elemento
+                    individualmente.
+                </p>
+                <b>Implementação de Lógica de Controle:</b><br>
+                <p>
+                    Oferece uma maneira de implementar lógica de controle condicional dentro do laço, decidindo quando
+                    continuar ou encerrar as iterações.
+                </p>
+                <p>
+                    Em resumo, instruções de controle com laços de repetição são fundamentais para criar programas mais
+                    flexíveis, eficientes e adaptáveis, lidando com a repetição de tarefas e respondendo dinamicamente
+                    às mudanças nas condições do programa.
+                </p>
             </div>
         </section>
 
