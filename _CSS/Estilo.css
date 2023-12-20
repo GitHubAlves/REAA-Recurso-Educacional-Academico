@@ -263,3 +263,7 @@ img#lacoFor{
     margin: auto;
     box-shadow: 0px 0px 10px black;
 }
+
+pre#codigo-final{
+    margin: 10px 0px 10px -160px;
+}
