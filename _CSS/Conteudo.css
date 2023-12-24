@@ -231,6 +231,13 @@ ul#Lista-Aulas li#Funcoes {
     background-repeat: no-repeat;
 }
 
+ul#Lista-Aulas li#Passagem_referencia {
+    background: url('../_IMAGENS/Referência_.png');
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+}
+
 ul#Lista-Aulas li#Ponteiro-vs-Endereco {
     background: url('../_IMAGENS/PonteiroVSEndereço.png');
     background-position: 50% 50%;
