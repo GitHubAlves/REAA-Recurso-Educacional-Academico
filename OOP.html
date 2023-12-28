@@ -35,76 +35,313 @@
         <div id="Aulas">
             <section id="conf-aulas">
                 <hgroup id="saudacoes">
-<<<<<<< HEAD
                     <h2>POO</h2>
                     <br>
                     <br>
                 </hgroup>
                 <p>
-                    Escrever sobre orientação a objetos em C++ envolve abordar os conceitos fundamentais da programação
-                    orientada a objetos (POO) e como eles são implementados nessa linguagem. Aqui estão alguns tópicos
-                    que você pode abordar: <br><br>
+                    Este, sem dúvida, é um tema altamente relevante na linguagem C++, na minha opinião. Para aqueles
+                    familiarizados com programação em C, é possível identificar semelhanças com o conceito de estruturas
+                    de dados. Em C, frequentemente utilizamos structs para representar modelos de objetos, definidos por
+                    atributos ou tipos de dados específicos. Abaixo, apresento um exemplo que serve como lembrete sobre
+                    como é a construção e utilização de uma struct em C. Essas noções são fundamentais ao se
+                    transicionar da programação procedural para a orientada a objetos em C++.
+                <pre>
+                    <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                            
+                //========================================
+                //--definição global da struct--
+               <font color="blue"> typedef struct
+                {
+                    int paginas;
+                    double peso;
+                    char *autor;
+                }</font><font color="green">Livro</font>;  //Defino novo tipo(classe) do tipo Livro 
+                
+                //========================================
+                //--Corpo do programa--
+                int main()
+                {
+                    printf("Hello REAA\n");
+                    Livro deEleronica;                   //defino meu novo dado chamado 
+                                                         //"deEletronica" do tipo estrutura livro;
+                            
+                    deEleronica.paginas=20;              //acesso osatributos da estrutura através do operador ponto
+                    deEleronica.peso=.2500;              //acesso osatributos da estrutura através do operador ponto
+                    deEleronica.autor="Lucas Alves";     //acesso osatributos da estrutura através do operador ponto
+                            
+                    printf("paginas: %d \n", deEleronica.paginas);  //Imprimo os dados de cada atributo
+                    printf("peso: %.3f\n", deEleronica.peso);       //Imprimo os dados de cada atributo
+                    printf("autor: %s\n", deEleronica.autor);       //Imprimo os dados de cada atributo
+                            
+                    return 0;
+                }//Fim da man 
+                    </code>
+                </pre>
+
                 </p>
-                    Classes e Objetos:
-                    Explique o conceito de classes e objetos em C++.
-                    Mostre como definir uma classe e criar objetos a partir dela.<br><br>
+                <p>
+                    Certamente! A orientação a objetos é, de maneira geral, um modelo de programação
+                    (evitei usar a palavra-paradigma)
+                    que oferece um
+                    modelo estruturado para resolver problemas. Em termos simples, ela representa uma abordagem para
+                    modelar conceitos do mundo real, utilizando a noção de objetos. No exemplo apresentado
+                    anteriormente, ilustrei essa abordagem em um pequeno programa em C, que representa a estrutura de um
+                    livro, focalizando características específicas, tais como a quantidade de páginas, o peso e o autor.
+                    Embora existam mais atributos possíveis, optei por citar apenas esses para fins didáticos. Essa
+                    simplificação ajuda a destacar a essência da orientação a objetos na prática, mostrando como ela
+                    pode ser aplicada de maneira concisa e eficaz na representação de entidades do mundo real.
+                </p>
+                <p>
+                    No corpo do meu programa principal, eu criei uma variável chamada <font color="gray">
+                        <em>deEletronica</em>
+                    </font> do tipo
+                    <font color="gray"><em> estrutura Livro</em></font>,
+                    eu poderia criar outra variável chamada <font color="gray"><em>deFisica, deGeometria, deAutoAjuda e
+                            etc...</em></font> com as mesmas caracteristicas da estrutura
+                    Livro e com isso criando
+                    uma estrutura de dados. Ou uma estante de livros.
+                </p>
+                <p>
+                    Na linguagem C++, em vez de criarmos uma struct, criamos uma <font color="gray">classe</font>.
+                    Dentro dela, não só utilizamos
+                    tipos de dados primitivos como <font color="gray">int, float, double e char</font>, chamados de
+                    membros de dados, para definir
+                    as características do objeto. Além disso, incluímos funções, chamadas de funções membros, que
+                    estabelecem comportamentos específicos. Isso faz com que uma variável, por exemplo, chamada de
+                    <em>"deEletrônica"</em>, não seja apenas uma variável, mas um objeto. Isso acontece porque, além de
+                    possuir
+                    características, ela também tem comportamento devido às funções membros que executam tarefas dentro
+                    da classe. E ai, que que achou?
+                </p>
+                <p>
+                    A baixo cito o mesmo exemplo da estrutura livro. Porém, modificado comforme explicado anteriromente,
+                    em vez de struct passa a ser class e além de tipos primitivos declarados como <em>private</em>,
+                    temos
+                    também funções membros declarados como <em>public</em>.
+                </p>
+                <pre>
+                    <code>
+#include &lt;iostream&gt;
+using namespace std;
+#include &lt;string&gt;
+using std::string;
+                            
+<font color="#D3D3D3">//========================================</font>
+<font color="#D3D3D3">//--definição global da struct--</font>
 
-                    Encapsulamento:
-                    Destaque o conceito de encapsulamento, que envolve o agrupamento de dados e métodos relacionados em
-                    uma única unidade (a classe).
-                    Demonstre como usar modificadores de acesso (public, private, protected) para controlar o acesso aos
-                    membros da classe.<br><br>
+class Livro
+{
+public:
+    Livro(int=0, double=0.0, string=" ");                       
+    void    setNumberPage(int);
+    int     getNumberPage();
 
-                    Herança:
-                    Apresente o conceito de herança em C++ e como ele permite a criação de uma nova classe com base em
-                    uma classe existente.
-                    Explique os tipos de herança, como herança pública, privada e protegida.<br><br>
+    void    setWeight(double);
+    double  getWeight();
 
-                    Polimorfismo:
-                    Discuta o polimorfismo, que permite que objetos de diferentes classes sejam tratados de maneira
-                    uniforme.
-                    Aborde o polimorfismo de compilador e de tempo de execução, mostrando exemplos práticos.<br><br>
+    void setAutor(string);
+    string getAutor();
 
-                    Métodos Virtuais:
-                    Introduza métodos virtuais e como eles são usados para alcançar o polimorfismo em C++.
-                    Explique a diferença entre métodos virtuais e não virtuais.<br><br>
+    void imprime();
+private:
+    int     _page;
+    double  _weight;
+    string  _autor;
 
-                    Sobrecarga de Operadores:
-                    Demonstre como realizar a sobrecarga de operadores em C++, permitindo a definição de comportamento
-                    personalizado para operadores com objetos de suas classes.<br><br>
+};
 
-                    Construtores e Destrutores:
-                    Explique a importância dos construtores e destrutores em C++.
-                    Aborde construtores de cópia e operadores de atribuição em contexto de orientação a objetos.<br><br>
+<font color="#D3D3D3">//========================================</font>
+<font color="#D3D3D3">//--Corpo do programa--</font>
+int main()
+{
+    printf("Hello REAA\n");
+    Livro deEletronica;    //Crio um objeto "deEletronica" da classe Livro
 
-                    Templates e Programação Genérica:
-                    Introduza templates em C++ e como eles são usados para criar classes e funções genéricas.
-                    Mostre exemplos de programação genérica.<br><br>
+    deEletronica.setAutor("Lucas Alves");  //chamo a função membro "setAutor" para setar o nome do autor
+    deEletronica.setWeight(0.4);           //chamo a função membro "setWeight" para setar o peso do livro
+    deEletronica.setNumberPage(10);        //chamo a função membro "setNumberPage" para setar o numero de paginas do livo
 
-                    Gerenciamento de Memória:
-                    Aborde o gerenciamento de memória em C++ em relação à criação e destruição de objetos.
-                    Destaque a importância do uso apropriado de new e delete, bem como a utilidade dos smart pointers.<br><br>
+    deEletronica.imprime();                //chamo a função mebro "imprime" para imprimir os valore dos membros de dados
+                                           //do objeto criado no cropo da função man.
+    return 0;
+}//Fim da man
+                            
+<font color="#D3D3D3">//========================================</font>
+<font color="#D3D3D3">//--Construtor--</font>
+Livro::Livro(int paginas, double peso, string autor)
+{
+    _autor=autor;
+    _page=paginas;
+    _weight=peso;
+}//Fim do construtor
+<font color="#D3D3D3">//========================================
+//--Seta o numero de paginas--</font>
+void Livro::setNumberPage(int page)
+{
+    _page=page;
+}//Fim  setNumberPage
+<font color="#D3D3D3">//========================================
+//--Entrega o número de paginas--</font>
+int Livro::getNumberPage()
+{
+    return _page;
+}//Fim do getNumberPage
+<font color="#D3D3D3">//========================================
+//--Seta o peso do livro--</font>
+void Livro::setWeight(double peso)
+{
+    _weight=peso;
+}//FIm do getWeight
+<font color="#D3D3D3">//========================================
+//--Entrega o peso do livro--</font>
+double Livro::getWeight()
+{
+    return _weight;
+}//Fim
+<font color="#D3D3D3">//========================================
+//--Seta o Autor do livro--</font>
+void Livro::setAutor(string autor)
+{
+    _autor=autor;
+}//Fim do setAutor
+<font color="#D3D3D3">//========================================
+//--Entrega o autor do livro--</font>
+string Livro::getAutor()
+{
+    return _autor;
+}//Fim do getAutor
 
-                    Exceções:
-                    Explique como o tratamento de exceções em C++ pode ser aplicado em um contexto de orientação a
-                    objetos.
-                    Mostre como criar e capturar exceções.<br><br>
 
-                    Ao explorar esses tópicos, você terá uma visão abrangente dos conceitos de orientação a objetos em
-                    C++. Certifique-se de fornecer exemplos práticos para ilustrar cada conceito e tornar o conteúdo
-                    mais compreensível.<br><br>
+<font color="#D3D3D3">//========================================
+//--Imprime na tela--</font>
+void Livro::imprime()
+{
+    cout&lt;&lt;"Numero paginas :"&lt;&lt;getNumberPage()&lt;&lt;endl;
+    cout&lt;&lt;"peso  do livro :"&lt;&lt;getWeight()&lt;&lt;endl;
+    cout&lt;&lt;"Autor do livro :"&lt;&lt;getAutor()&lt;&lt;endl;
+}
+                            
+                            
 
-               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+                    </code>
+                </pre>
+
+
+
+                Encapsulamento:
+                Destaque o conceito de encapsulamento, que envolve o agrupamento de dados e métodos relacionados em
+                uma única unidade (a classe).
+                Demonstre como usar modificadores de acesso (public, private, protected) para controlar o acesso aos
+                membros da classe.<br><br>
+
+                Herança:
+                Apresente o conceito de herança em C++ e como ele permite a criação de uma nova classe com base em
+                uma classe existente.
+                Explique os tipos de herança, como herança pública, privada e protegida.<br><br>
+
+                Polimorfismo:
+                Discuta o polimorfismo, que permite que objetos de diferentes classes sejam tratados de maneira
+                uniforme.
+                Aborde o polimorfismo de compilador e de tempo de execução, mostrando exemplos práticos.<br><br>
+
+                Métodos Virtuais:
+                Introduza métodos virtuais e como eles são usados para alcançar o polimorfismo em C++.
+                Explique a diferença entre métodos virtuais e não virtuais.<br><br>
+
+                Sobrecarga de Operadores:
+                Demonstre como realizar a sobrecarga de operadores em C++, permitindo a definição de comportamento
+                personalizado para operadores com objetos de suas classes.<br><br>
+
+                Construtores e Destrutores:
+                Explique a importância dos construtores e destrutores em C++.
+                Aborde construtores de cópia e operadores de atribuição em contexto de orientação a objetos.<br><br>
+
+                Templates e Programação Genérica:
+                Introduza templates em C++ e como eles são usados para criar classes e funções genéricas.
+                Mostre exemplos de programação genérica.<br><br>
+
+                Gerenciamento de Memória:
+                Aborde o gerenciamento de memória em C++ em relação à criação e destruição de objetos.
+                Destaque a importância do uso apropriado de new e delete, bem como a utilidade dos smart
+                pointers.<br><br>
+
+                Exceções:
+                Explique como o tratamento de exceções em C++ pode ser aplicado em um contexto de orientação a
+                objetos.
+                Mostre como criar e capturar exceções.<br><br>
+
+                Ao explorar esses tópicos, você terá uma visão abrangente dos conceitos de orientação a objetos em
+                C++. Certifique-se de fornecer exemplos práticos para ilustrar cada conceito e tornar o conteúdo
+                mais compreensível.<br><br>
+
+
             </section>
-=======
-                    <h2>OOP- Programação a orientação a objetos</h2>
-                    <br>
-                    <br>
-                </hgroup>
-            <p>
-                [TEXTO]
-            </p>
->>>>>>> 976744997db39d64bc093ecb94d5cc1c7ecb00fd
         </div>
 
 
