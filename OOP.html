@@ -64,10 +64,12 @@
                             <li>Templates e Programação Genérica</li>
                             <li>Gerenciamento de Memória</li>
                             <li>Exceções</li>
-                        </ol>                        
+                        </ol>
                         </p>
-                        <p>È importante que leia este resumo para depois consultar o livro do deitel "Como programar C++" 5ed.
-                            O conteúdo é extenso, e precisa de muita paciência e tranquilidade para absorver & tempo e dedicação para praticar.
+                        <p>È importante que leia este resumo para depois consultar o livro do deitel "Como programar
+                            C++" 5ed.
+                            O conteúdo é extenso, e precisa de muita paciência e tranquilidade para absorver & tempo e
+                            dedicação para praticar.
                             <br><br>Bons estudos!.
                         </p>
 
@@ -160,14 +162,16 @@
                 </p>
                 <pre>
                     <code>
+<article id="cabecalho">                        
 #include &lt;iostream&gt;
 using namespace std;
 #include &lt;string&gt;
 using std::string;
-                            
+</article>                            
 <font color="#D3D3D3">//========================================</font>
 <font color="#D3D3D3">//--definição global da struct--</font>
 
+<article id="prototypeFunction">
 class Livro
 {
 public:
@@ -188,9 +192,11 @@ private:
     string  _autor;
 
 };
+</article>
 
 <font color="#D3D3D3">//========================================</font>
 <font color="#D3D3D3">//--Corpo do programa--</font>
+<article id="MainBody">
 int main()
 {
     printf("Hello REAA\n");
@@ -204,9 +210,12 @@ int main()
                                            //do objeto criado no cropo da função man.
     return 0;
 }//Fim da man
-                            
+</article >    
+
 <font color="#D3D3D3">//========================================</font>
 <font color="#D3D3D3">//--Construtor--</font>
+
+<article id="DevFunction">
 Livro::Livro(int paginas, double peso, string autor)
 {
     _autor=autor;
@@ -249,8 +258,6 @@ string Livro::getAutor()
 {
     return _autor;
 }//Fim do getAutor
-
-
 <font color="#D3D3D3">//========================================
 //--Imprime na tela--</font>
 void Livro::imprime()
@@ -259,18 +266,23 @@ void Livro::imprime()
     cout&lt;&lt;"peso  do livro :"&lt;&lt;getWeight()&lt;&lt;endl;
     cout&lt;&lt;"Autor do livro :"&lt;&lt;getAutor()&lt;&lt;endl;
 }
+</article>
                     </code>
                 </pre>
 
                 <hgroup id="saudacoes">
                     <h2>Encapsulamento:</h2>
                     <br>
-                    <br>
                 </hgroup>
 
-                No codigo acima, já matei três dos primeiros tópicos <em>classe, objeto e encapsulamento</em>. Mas! vamos refletir um pouco
-                sobre o código 
-
+                <p>
+                    No codigo acima, já exercitei três dos primeiros recursos de orientação a objetos <em>classe, objeto
+                        e encapsulamento</em>. Vamos refletir um pouco sobre programa, como de praxe foi <em>"dividido para conquistar"</em>
+                        cada bloco colorido é uma parte do programa. 
+                </p>
+<p>
+    o encapsulamento começa no bloco 
+</p>
                 Herança:
                 Apresente o conceito de herança em C++ e como ele permite a criação de uma nova classe com base em
                 uma classe existente.
