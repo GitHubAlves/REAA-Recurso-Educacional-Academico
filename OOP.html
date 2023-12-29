@@ -276,14 +276,111 @@ void Livro::imprime()
                 </hgroup>
 
                 <p>
-                    No codigo acima, já exercitei três dos primeiros recursos de orientação a objetos <em>classe, objeto
-                        e encapsulamento</em>. Vamos refletir um pouco sobre programa, como de praxe foi <em>"dividido para conquistar"</em>
-                        cada bloco colorido é uma parte do programa. 
+                    No codigo acima, já explorei três dos conceitos fundamentais da orientação a objetos: <em>classe,
+                        objeto
+                        e encapsulamento</em>. Vou conduzir uma reflexão sobre o programa acima e como é habitual
+                    <em>"dividir para conquistar"</em> cada bloco colorido é uma parte do programa. Isso facilita
+                    uma compreensão na hora de construir programas, promevendo reusabilidade do código e manutenção.
                 </p>
-<p>
-    o encapsulamento começa no bloco 
-</p>
-                Herança:
+
+                <p>
+                    O primeiro bloco se refere a inclusão das bibliotecas padrões do C++:<em>&lt;iostream&gt;</em>
+                    , <em>&lt;string&gt;</em>, utilizei o <em> using std::string</em> para importar somente a função
+                    <em>string</em>
+                    . Mas ! se quiser facilitar pode usar <em>using namespace std:</em>
+                    a baixo de cada inclusão de lib's.
+                </p>
+                <p>
+                    O segundo bloco, é mais interessante pois é nele que estou criando a minha unidade de
+                    programa(classe). Veja que a sintaxe
+                    é
+                <pre>
+                        <code>
+                            class &lt;nome da classe&gt;
+                            {
+                                publi:
+                                   <font color="gray"> <em>...protótipo de funções, que serão chamadas de funções membro</em></font>
+                                private:
+                                <font color="gray">    <em>...declaração de variáveis, que serão chamadas de atributos</em></font>
+                            };
+                        </code>
+                    </pre>
+
+                </p>
+                <p>
+                    O último bloco é a parte de desenvolvimento dos protótipos das funções(funções membros).
+                    <font color="gray"> <em>A sintaxe para desenvolver as funções membros</em></font> é, primeiro:
+                    <br>
+                    -Especifica o tipo de retorno da função membro.<font color="gray"><em>double, int, float..</em>
+                    </font> <br>
+                    -Usa <font color="gray"><em>classe</em>::<em>Funcão membro. EX: Livro::getWeight()</em></font> <br>
+                    -Dentro do bloco de código, crie a regra de comportamento da função membro.<br>
+                <pre>
+        <font color="gray">                    { <br>                                           
+                                    ...funções membro.<br>
+                            }
+                        </font> 
+                </pre>
+                <br>
+                Ficando dessa forma.
+                <pre>
+                        <font color="gray"><br>
+                            //======================================== <br>
+                            //--Entrega o peso do livro-- <br>
+                            double Livro::getWeight() <br>
+                            { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    return _weight; <br>
+                            }//Fim </font> 
+                    </pre>
+                <br>
+
+                </p>
+                <p>
+                    Dentro do corpo <font color="gray"><em>int main()</em></font>. Fazemos a chamada da classe para
+                    criar um objeto, em algumas obras
+                    é dito com invocar a classe, mas particularmente acho isso muito dark pra programação. Então,
+                    chamamos a classe "Livro" e instanciamos
+                    um objeto. Ex:
+                    <font color="gray"><br>
+                        <pre>
+                        Livro deEletrônica;
+                    </pre>
+                    </font>
+                    <br>
+                    E setamamos cada atributo do objeto através das funções "setting".
+                <pre>
+                        //========================================  <br>
+                        //--Seta o peso do livro--                  <br>
+                        void Livro::<b>set</b>Weight(double peso)          <br>
+                        {                                           <br>         
+                             _weight=peso;                          <br>
+                        }//FIm do getWeight                         <br>
+                    </pre>
+                </p>
+                <p>
+                    Como Aluno da Engenharia Eletrônica, eu demorei muito para aprender os macetes da programação
+                    orientada a objetos, mas com muitos exercícos, e leitura pausadamente eu pude
+                    absorver o conhecimento.
+                    A parte do código acima <font color="gray"><em> _weight=peso;</em>em.</font>, está em um formato
+                    muito simples para determinar
+                    o comportamento do objeto. A função "set" é muito usada
+                    para "setar" o comportamento do objeto com segurança, ou seja, é nela que definimos com segurança as
+                    regras da função membro, usando, lógica de relação
+                    (maior >, menor <, igual=, direferente !=), lógica condicional(if, else, switch..) outros controles
+                        de desição visto anteriromente. </p>
+                        <p>
+                            Após as funções "setting", usamos funções "getting" para retornar os valores dos atributos.
+                            EX:
+                        <pre>
+                        double Livro::getWeight()  <br>
+                        {                           <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return _weight;        <br>
+                        }//Fim                      <br>
+                    </pre>
+
+                </p>
+
+                <!--Herança:
                 Apresente o conceito de herança em C++ e como ele permite a criação de uma nova classe com base em
                 uma classe existente.
                 Explique os tipos de herança, como herança pública, privada e protegida.<br><br>
@@ -321,7 +418,7 @@ void Livro::imprime()
 
                 Ao explorar esses tópicos, você terá uma visão abrangente dos conceitos de orientação a objetos em
                 C++. Certifique-se de fornecer exemplos práticos para ilustrar cada conceito e tornar o conteúdo
-                mais compreensível.<br><br>
+                mais compreensível.<br><br>-->
 
 
             </section>
