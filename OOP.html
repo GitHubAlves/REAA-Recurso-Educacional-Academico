@@ -279,7 +279,7 @@ void Livro::imprime()
                     No codigo acima, já explorei três dos conceitos fundamentais da orientação a objetos: <em>classe,
                         objeto
                         e encapsulamento</em>. Vou conduzir uma reflexão sobre o programa acima e como é habitual
-                    <em>"dividir para conquistar"</em> cada bloco colorido é uma parte do programa. Isso facilita
+                    <em>"dividir para conquistar"</em> cada bloco de tom cinza é uma parte do programa. Isso facilita
                     uma compreensão na hora de construir programas, promevendo reusabilidade do código e manutenção.
                 </p>
 
@@ -292,13 +292,14 @@ void Livro::imprime()
                 </p>
                 <p>
                     O segundo bloco, é mais interessante pois é nele que estou criando a minha unidade de
-                    programa(classe). Veja que a sintaxe
-                    é
+                    programa(classe). Veja a sintaxe.
+                   
                 <pre>
                         <code>
                             class &lt;nome da classe&gt;
                             {
-                                publi:
+                                public:
+                                   <font color="gray"> <em>...Construtor</em></font>
                                    <font color="gray"> <em>...protótipo de funções, que serão chamadas de funções membro</em></font>
                                 private:
                                 <font color="gray">    <em>...declaração de variáveis, que serão chamadas de atributos</em></font>
@@ -308,13 +309,58 @@ void Livro::imprime()
 
                 </p>
                 <p>
+                    A classe é definida com a palavra reservada <em>class</em> seguido do nome da classe que o programador vai escolher,
+                     e dentro das chaves <em>{..}</em> será definido duas partes de acesso, uma de acesso publico <em>public</em> e outra de acesso privado
+                     <em>private</em>. 
+                </p>
+                <p>
+                    Em <em>public</em> teremos um construtor padrão que será responsável por inicialiar os atributos da classe. 
+                    Detalhe! no construtor é opcional declarar o nome do atributo, eu sempre costumo colocar apenas o tipo e junto já definir 
+                    o valor que será inicializado. Em seguida defino minhas funções membros. Sempre utilizo set no inicio de cada função que vou usar apenas para setar os atributos, isso por questão de segurança, por exemplo
+                    seja um atributo chamada <em>idade</em>, logo sabemos que não há idade negativa, então posso definir.
+                    <pre>
+                        <code>
+                            void Livro::setIdade(int age)
+                            {
+                                _AtributoAge = (age > 0 ? age:0) //usando o operador ternário(interrogação), 
+                                                                 //digo que se o usuário estipular uma idade
+                                                                 //maior que zero, então o atributo receberá 
+                                                                 //o próprio valor "age", senão receberá o
+                                                                 //valor 
+                                                                 //zero.
+                            }
+                        </code>
+                    </pre>
+                </p>
+                <p>
+                    Como a função apenas "seta o atributo", então não retorna nada, por isso "void".
+                    Já a função "get", deve retornar alguma o valor de tipo especificado.
+                    <pre>
+                        <code>
+                            int Livro::getIdade()
+                            {
+                                return _AtributoAge;
+                            }
+                            
+                        </code>
+                    </pre>
+                </p>
+                <p>
+                    Repare que <em>"Livro::"</em> acompanha a função membro, isso por que o duas vezes dois pontos é um operador que conecta 
+                    a relação da classe com as funções membros(você vai encotrar no livro "Como programar em C++-Deitel, 5ed" como, <em>Operador
+                        de resolução de escopo binário).
+                    </em>
+                </p>
+                <p>
                     O último bloco é a parte de desenvolvimento dos protótipos das funções(funções membros).
                     <font color="gray"> <em>A sintaxe para desenvolver as funções membros</em></font> é, primeiro:
                     <br>
                     -Especifica o tipo de retorno da função membro.<font color="gray"><em>double, int, float..</em>
                     </font> <br>
-                    -Usa <font color="gray"><em>classe</em>::<em>Funcão membro. EX: Livro::getWeight()</em></font> <br>
-                    -Dentro do bloco de código, crie a regra de comportamento da função membro.<br>
+                    -Usa <font color="gray"><em>&lt;class&gt;</em>::<em>&lt;Funcão membro&gt;. <br> 
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EX: Livro::getWeight()</em></font> <br>
+                    -Dentro do bloco de código, crie a regra de comportamento da função membro assim como foi explicado acima sobre a função que 
+                    "seta e retorna" o _AtributoAge.<br>
                 <pre>
         <font color="gray">                    { <br>                                           
                                     ...funções membro.<br>
@@ -325,16 +371,26 @@ void Livro::imprime()
                 Ficando dessa forma.
                 <pre>
                         <font color="gray"><br>
-                            //======================================== <br>
-                            //--Entrega o peso do livro-- <br>
-                            double Livro::getWeight() <br>
-                            { <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    return _weight; <br>
+                            //========================================
+                            //--Seta o peso do livro--
+                            void Livro::setWeight(double peso)
+                            {
+                                 _weight=peso;
+                            }//FIm do getWeight
+
+                            //========================================
+                            //--Entrega o peso do livro--
+                            double Livro::getWeight()
+                            {
+                                  return _weight;
                             }//Fim </font> 
                     </pre>
                 <br>
 
                 </p>
+                <p>Observa que foi usado duas funções para definir um comportamento. Funções <b>getting e setting</b>
+                ,é um boa prática de programação usar função <em>set</em> para setar e garantir que o atributo terá o valor dentro do esperado
+             e função  <em>get</em> para usa-la como retorno</p>
                 <p>
                     Dentro do corpo <font color="gray"><em>int main()</em></font>. Fazemos a chamada da classe para
                     criar um objeto, em algumas obras
