@@ -293,7 +293,7 @@ void Livro::imprime()
                 <p>
                     O segundo bloco, é mais interessante pois é nele que estou criando a minha unidade de
                     programa(classe). Veja a sintaxe.
-                   
+
                 <pre>
                         <code>
                             class &lt;nome da classe&gt;
@@ -309,16 +309,23 @@ void Livro::imprime()
 
                 </p>
                 <p>
-                    A classe é definida com a palavra reservada <em>class</em> seguido do nome da classe que o programador vai escolher,
-                     e dentro das chaves <em>{..}</em> será definido duas partes de acesso, uma de acesso publico <em>public</em> e outra de acesso privado
-                     <em>private</em>. 
+                    A classe é definida com a palavra reservada <em>class</em> seguido do nome da classe que o
+                    programador vai escolher,
+                    e dentro das chaves <em>{..}</em> será definido duas partes de acesso, uma de acesso publico
+                    <em>public</em> e outra de acesso privado
+                    <em>private</em>.
                 </p>
                 <p>
-                    Em <em>public</em> teremos um construtor padrão que será responsável por inicialiar os atributos da classe. 
-                    Detalhe! no construtor é opcional declarar o nome do atributo, eu sempre costumo colocar apenas o tipo e junto já definir 
-                    o valor que será inicializado. Em seguida defino minhas funções membros. Sempre utilizo set no inicio de cada função que vou usar apenas para setar os atributos, isso por questão de segurança, por exemplo
-                    seja um atributo chamada <em>idade</em>, logo sabemos que não há idade negativa, então posso definir.
-                    <pre>
+                    Em <em>public</em> teremos um construtor padrão que será responsável por inicialiar os atributos da
+                    classe.
+                    Detalhe! no construtor é opcional declarar o nome do atributo, eu sempre costumo colocar apenas o
+                    tipo e junto já definir
+                    o valor que será inicializado. Em seguida defino minhas funções membros. Sempre utilizo set no
+                    inicio de cada função que vou usar apenas para setar os atributos, isso por questão de segurança,
+                    por exemplo
+                    seja um atributo chamada <em>idade</em>, logo sabemos que não há idade negativa, então posso
+                    definir.
+                <pre>
                         <code>
                             void Livro::setIdade(int age)
                             {
@@ -334,8 +341,8 @@ void Livro::imprime()
                 </p>
                 <p>
                     Como a função apenas "seta o atributo", então não retorna nada, por isso "void".
-                    Já a função "get", deve retornar alguma o valor de tipo especificado.
-                    <pre>
+                    Já a função "get", deve retornar algum valor de tipo especificado.
+                <pre>
                         <code>
                             int Livro::getIdade()
                             {
@@ -346,8 +353,10 @@ void Livro::imprime()
                     </pre>
                 </p>
                 <p>
-                    Repare que <em>"Livro::"</em> acompanha a função membro, isso por que o duas vezes dois pontos é um operador que conecta 
-                    a relação da classe com as funções membros(você vai encotrar no livro "Como programar em C++-Deitel, 5ed" como, <em>Operador
+                    Repare que <em>"Livro::"</em> acompanha a função membro, isso por que o duas vezes dois pontos é um
+                    operador que conecta
+                    a relação da classe com as funções membros(você vai encotrar no livro "Como programar em C++-Deitel,
+                    5ed" como, <em>Operador
                         de resolução de escopo binário).
                     </em>
                 </p>
@@ -357,9 +366,11 @@ void Livro::imprime()
                     <br>
                     -Especifica o tipo de retorno da função membro.<font color="gray"><em>double, int, float..</em>
                     </font> <br>
-                    -Usa <font color="gray"><em>&lt;class&gt;</em>::<em>&lt;Funcão membro&gt;. <br> 
-                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EX: Livro::getWeight()</em></font> <br>
-                    -Dentro do bloco de código, crie a regra de comportamento da função membro assim como foi explicado acima sobre a função que 
+                    -Usa <font color="gray"><em>&lt;class&gt;</em>::<em>&lt;Funcão membro&gt;. <br>
+                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EX: Livro::getWeight()</em></font>
+                    <br>
+                    -Dentro do bloco de código, crie a regra de comportamento da função membro assim como foi explicado
+                    acima sobre a função que
                     "seta e retorna" o _AtributoAge.<br>
                 <pre>
         <font color="gray">                    { <br>                                           
@@ -388,9 +399,10 @@ void Livro::imprime()
                 <br>
 
                 </p>
-                <p>Observa que foi usado duas funções para definir um comportamento. Funções <b>getting e setting</b>
-                ,é um boa prática de programação usar função <em>set</em> para setar e garantir que o atributo terá o valor dentro do esperado
-             e função  <em>get</em> para usa-la como retorno</p>
+                <p>Observa que foi usado duas funções para definir um comportamento. Funções <b>setting e getting</b>
+                    ,é um boa prática de programação usar função <em>set</em> para setar e garantir que o atributo terá
+                    o valor dentro do esperado
+                    e função <em>get</em> para usa-la como retorno</p>
                 <p>
                     Dentro do corpo <font color="gray"><em>int main()</em></font>. Fazemos a chamada da classe para
                     criar um objeto, em algumas obras
@@ -400,43 +412,62 @@ void Livro::imprime()
                     <font color="gray"><br>
                         <pre>
                         Livro deEletrônica;
+
+                        ou 
+
+                        Livro deFisica(50, 0.62, "Eletrônica na veia");
                     </pre>
                     </font>
                     <br>
-                    E setamamos cada atributo do objeto através das funções "setting".
+
+
+
+                </p>
                 <pre>
-                        //========================================  <br>
-                        //--Seta o peso do livro--                  <br>
-                        void Livro::<b>set</b>Weight(double peso)          <br>
-                        {                                           <br>         
-                             _weight=peso;                          <br>
-                        }//FIm do getWeight                         <br>
-                    </pre>
+                    <code>
+<font color="gray">//========================================
+//--Corpo do programa--
+int main()
+{
+    printf("Hello REAA\n");
+    Livro deEletronica;    //Crio um objeto "deEletronica" da classe Livro
+
+    deEletronica.setAutor("Lucas Alves");  //chamo a função membro "setAutor" para setar o nome do autor
+    deEletronica.setWeight(0.4);           //chamo a função membro "setWeight" para setar o peso do livro
+    deEletronica.setNumberPage(10);        //chamo a função membro "setNumberPage" para setar o numero de paginas do livo
+
+    deEletronica.imprime();                //chamo a função mebro "imprime" para imprimir os valore dos membros de dados
+                                           //do objeto criado no cropo da função man.
+
+//=====Criamos outro objeto com inicialização direta==========
+    cout&lt;&lt;endl;
+    cout&lt;&lt;"novo objeto"&lt;&lt;endl;
+    Livro deFisica(50, 0.61, "Gravidade Zero");
+    deFisica.imprime();
+
+    return 0;
+}//Fim da man 
+</font> 
+                </code>
+                </pre>
+                <p>
+                    Para atribuir valores aos atributos é usado o operador ponto (.) para relacionar o objeto com a função membro
+                    ou podendo inicializar os atributos usando o próprio objeto, como é mostrado na denição <font color="gray">
+                    <em>Livro deFisica(50, 061, "Gravidade Zero")</em></font>
+
                 </p>
                 <p>
                     Como Aluno da Engenharia Eletrônica, eu demorei muito para aprender os macetes da programação
                     orientada a objetos, mas com muitos exercícos, e leitura pausadamente eu pude
-                    absorver o conhecimento.
-                    A parte do código acima <font color="gray"><em> _weight=peso;</em>em.</font>, está em um formato
-                    muito simples para determinar
-                    o comportamento do objeto. A função "set" é muito usada
-                    para "setar" o comportamento do objeto com segurança, ou seja, é nela que definimos com segurança as
-                    regras da função membro, usando, lógica de relação
-                    (maior >, menor <, igual=, direferente !=), lógica condicional(if, else, switch..) outros controles
-                        de desição visto anteriromente. </p>
-                        <p>
-                            Após as funções "setting", usamos funções "getting" para retornar os valores dos atributos.
-                            EX:
-                        <pre>
-                        double Livro::getWeight()  <br>
-                        {                           <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return _weight;        <br>
-                        }//Fim                      <br>
-                    </pre>
-
+                    absorver o conhecimento. Copie o código acima, rode ele e estude, depois faça alterações 
+                    para ver na prática como funciona a declaração de classes e objetos.
                 </p>
+                        <p>
 
-                <!--Herança:
+
+                        </p>
+
+                        <!--Herança:
                 Apresente o conceito de herança em C++ e como ele permite a criação de uma nova classe com base em
                 uma classe existente.
                 Explique os tipos de herança, como herança pública, privada e protegida.<br><br>
