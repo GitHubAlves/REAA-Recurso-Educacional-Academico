@@ -18,7 +18,7 @@ body {
 
 /*Formatação da interface*/
 div#interface {
-    width: 1000px;
+    width:1000px;
     height: auto;
     background-color: rgb(252, 252, 251);
     margin: -40px auto 50px auto;
@@ -198,7 +198,6 @@ aside#Lateral {
     float: right;
     width: 350px;
     padding-right: 35px;
-
 
 }
 
