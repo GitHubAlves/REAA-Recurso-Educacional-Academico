@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Fonte-Logo';
-    src: url("../_Fontes/bubblegum-sans-regular.otf");
-    src: url("../_Fontes/Dosis/Dosis-VariableFont_wght.ttf");
+    src: url("bubblegum-sans-regular.otf");
+    src: url("Dosis/Dosis-VariableFont_wght.ttf");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Titillium+Web:wght@200&display=swap');
@@ -33,7 +33,7 @@ header#cabecalho {
     position: relative;
     border-bottom: 1px rgb(81, 81, 82) solid;
     width: -90px;
-    /*background: url("../_IMAGENS/REAA-Logo001.PNG") no-repeat 1px 0px;*/
+    /*background: url("REAA-Logo001.PNG") no-repeat 1px 0px;*/
     padding: 10px;
 }
 
@@ -209,7 +209,7 @@ ul#Lista-Aulas li:hover span {
 }
 
 ul#Lista-Aulas li#Introducao-ao-C {
-    background: url('../_IMAGENS/intrudução\ a\ C++.png');
+    background: url('intrudução\ a\ C++.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;        
@@ -219,27 +219,27 @@ ul#Lista-Aulas li#Introducao-ao-C {
 
 
 ul#Lista-Aulas li#instrucoes-de-controle {
-    background: url('../_IMAGENS/fluxograma.png');
+    background: url('fluxograma.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
 }
 
 ul#Lista-Aulas li#Funcoes {
-    background: url('../_IMAGENS/funcao.png');
+    background: url('funcao.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Passagem_referencia {
-    background: url('../_IMAGENS/Referência_.png');
+    background: url('Referência_.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Ponteiro-vs-Endereco {
-    background: url('../_IMAGENS/PonteiroVSEndereço.png');
+    background: url('PonteiroVSEndereço.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
@@ -247,7 +247,7 @@ ul#Lista-Aulas li#Ponteiro-vs-Endereco {
 
 
 ul#Lista-Aulas li#classesEobjetos {
-    background: url('../_IMAGENS/opp.png');
+    background: url('opp.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
@@ -258,111 +258,111 @@ ul#Lista-Aulas li:hover {
 }
 
 ul#Lista-Aulas li#Classes {
-    background: url('../_IMAGENS/classes.png');
+    background: url('classes.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Heranca {
-    background: url('../_IMAGENS/Herança.png');
+    background: url('Herança.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Polimorfismo {
-    background: url('../_IMAGENS/polimorfismo.PNG');
+    background: url('polimorfismo.PNG');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Template {
-    background: url('../_IMAGENS/Templat.png');
+    background: url('Templat.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Sobrecarga {
-    background: url('../_IMAGENS/SobreCarga.png');
+    background: url('SobreCarga.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Operadores {
-    background: url('../_IMAGENS/operadores.png');
+    background: url('operadores.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#I-O-de-fluxos {
-    background: url('../_IMAGENS/IO-Fluxo.PNG');
+    background: url('IO-Fluxo.PNG');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Memória-dinamica {
-    background: url('../_IMAGENS/memoria.png');
+    background: url('memoria.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Processamento-de-Arquivo {
-    background: url('../_IMAGENS/Arquivo.png');
+    background: url('Arquivo.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Classe-String {
-    background: url('../_IMAGENS/classeString.PNG');
+    background: url('classeString.PNG');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Programação-Web {
-    background: url('../_IMAGENS/progWeb.png');
+    background: url('progWeb.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Pesquisa {
-    background: url('../_IMAGENS/Pesquisa.png');
+    background: url('Pesquisa.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Classificacao {
-    background: url('../_IMAGENS/Classifica.png');
+    background: url('Classifica.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Estrutura-de-dados {
-    background: url('../_IMAGENS/EstruturaDados.png');
+    background: url('EstruturaDados.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
 }
 
 ul#Lista-Aulas li#bits {
-    background: url('../_IMAGENS/bits.png');
+    background: url('bits.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
 
 ul#Lista-Aulas li#Sistemas-embarcados {
-    background: url('../_IMAGENS/embarcados.png');
+    background: url('embarcados.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
