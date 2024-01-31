@@ -93,14 +93,20 @@
                         A técnica de programação "Polimorfismo" é alcançada através de duas maneiras.
                     </p>
                     <p>
-                        Através de templates de funções, como chamamos de sobrecargas de funções, também sobrecargas de operadores.
-                        Isso tudo, podemos usar a mesma função para trabalhar com varias formas, ou seja, chamar a mesma função membro
-                        e hora trabalhar com qual tipo de valroes de entrada. Por exemplo! a função <em>soma()</em>, pode receber um ou dois inteiros
-                        como também pode receber um ou dois double ou até mesmo uma string. E dessa maneira o polimorfismo é alcançado em tempo de compilação.
+                        Através de templates de funções, como chamamos de sobrecargas de funções, também sobrecargas de
+                        operadores.
+                        Isso tudo, podemos usar a mesma função para trabalhar com varias formas, ou seja, chamar a mesma
+                        função membro
+                        e hora trabalhar com qual tipo de valroes de entrada. Por exemplo! a função <em>soma()</em>,
+                        pode receber um ou dois inteiros
+                        como também pode receber um ou dois double ou até mesmo uma string. E dessa maneira o
+                        polimorfismo é alcançado em tempo de compilação.
                     </p>
                     <p>
-                        E não para por aí, se é preciso primeiro compilar para ter um polimorfismo bem escrito porque não alcançar polimorfismo
-                        em tempo de execução? Para isto é utilizado a palavra reservada <em>virtual</em> apenas na função membro da classe base.
+                        E não para por aí, se é preciso primeiro compilar para ter um polimorfismo bem escrito porque
+                        não alcançar polimorfismo
+                        em tempo de execução? Para isto é utilizado a palavra reservada <em>virtual</em> apenas na
+                        função membro da classe base.
                         Exemplo: <em>int virtual makeSound();</em>
                     </p>
                     <hgroup id="saudacoes">
@@ -108,8 +114,15 @@
                     </hgroup>
 
                     <p>
-                        Descreva o papel das funções virtuais na implementação do polimorfismo e explique como elas são
-                        declaradas e usadas.
+                        Em C++, funções virtuais desempenham um papel fundamental na implementação de polimorfismo. O
+                        polimorfismo é uma característica da programação orientada a objetos que permite que objetos de
+                        diferentes classes sejam tratados de maneira uniforme, proporcionando flexibilidade e
+                        extensibilidade ao código.
+
+                        Uma função virtual é uma função declarada em uma classe base que pode ser redefinida em uma
+                        classe derivada. Isso significa que, quando uma classe derivada herda de uma classe base e
+                        redefine uma função virtual, a versão da função na classe derivada será chamada quando a função
+                        for invocada através de um ponteiro ou referência da classe base.
                     </p>
 
                     <hgroup id="saudacoes">
@@ -117,36 +130,152 @@
                     </hgroup>
 
                     <p>
-                        Explique o conceito de função virtual pura e como ela é declarada em uma classe base. Explique
-                        por
-                        que ela torna uma classe abstrata.
+                        Em algumas situações, é desejável garantir que todas as classes derivadas de uma classe base
+                        tenham a implementação de um método específico. No entanto, em algumas circunstâncias, a classe
+                        base pode não ter informações suficientes para fornecer uma definição para uma função virtual.
+                        Para lidar com esses casos, C++ oferece o conceito de funções virtuais puras.
+                    </p>
+                    <p>
+                        Uma função virtual pura é uma função virtual que não possui implementação dentro da classe base.
+                        Para declarar uma função virtual pura, utiliza-se a seguinte forma:
+                        <br>
+                        <br>
+                        <em>virtual tipo nome_funcao(lista_args) = 0;</em>
+
                     </p>
 
                     <hgroup id="saudacoes">
                         <h2>6 Como funciona a ligação dinâmica em C++?</h2>
                     </hgroup>
                     <p>
-                        Descreva como a ligação dinâmica ocorre durante o polimorfismo de tempo de execução, indicando a
-                        importância do uso de ponteiros ou referências para objetos base.
+                        A ligação dinâmica (dynamic binding) em C++ está associada ao conceito de polimorfismo,
+                        especialmente ao polimorfismo de tempo de execução. A ligação dinâmica permite que o código
+                        invoque métodos de uma classe base por meio de um ponteiro ou referência da classe base, e a
+                        decisão sobre qual implementação específica chamar é tomada em tempo de execução.
                     </p>
+                    <p>
+                        A ligação dinâmica em C++ é alcançada principalmente através do uso de funções virtuais e
+                        ponteiros para classes base. Aqui estão os principais componentes que desempenham um papel na
+                        ligação dinâmica:
+                    </p>
+                    <p>
+                        Funções Virtuais:
+                        Uma classe base pode declarar funções virtuais. Essas funções virtuais podem ser redefinidas em
+                        classes derivadas.
+                    </p>
+
+                    <p>
+                        Ponteiro para Classe Base:
+                        Um ponteiro ou referência de uma classe base pode ser usado para apontar para objetos de classes
+                        derivadas.
+                    </p>
+
+                    <p>
+                        Palavra-Chave virtual:
+                        A palavra-chave virtual é usada para indicar que uma função em uma classe base é virtual e pode
+                        ser
+                        redefinida em classes derivadas.
+                    </p>
+
+                    <p>
+                        Uso de override:
+                        A palavra-chave override é usada nas classes derivadas para indicar explicitamente que uma
+                        função
+                        está redefinindo uma função virtual da classe base.
+                    </p>
+
+                    <p>
+                        Chamada Dinâmica:
+                        Quando uma função virtual é chamada através de um ponteiro ou referência de classe base, a
+                        implementação específica da classe derivada é chamada em tempo de execução.
+                    </p>
+
+
                     <hgroup id="saudacoes">
                         <h2>5 O que é uma classe abstrata em C++?</h2>
                     </hgroup>
 
                     <p>
-                        Defina o conceito de uma classe abstrata, destacando o papel das funções virtuais puras e
-                        explicando
-                        por que não é possível criar instâncias diretas de uma classe abstrata.
+                        <b>Uma classe abstrata em C++ é uma classe que contém pelo menos uma função virtual pura</b>.
+                        Uma função virtual pura é uma função virtual que não possui uma implementação na classe base e é
+                        declarada com a sintaxe virtual tipo nome_funcao() = 0;. A presença de pelo menos uma função
+                        virtual pura torna a classe abstrata. Vale lembrar alguns pontos importantes relacionados a
+                        classes abstratas e funções virtuais puras:
                     </p>
                     <hgroup id="saudacoes">
                         <h2>4 Quais são as vantagens do polimorfismo em C++?</h2>
                     </hgroup>
 
                     <p>
-                        Discuta os benefícios do polimorfismo, como a flexibilidade do código, a capacidade de estender
-                        o
-                        sistema de classes e facilitar a manutenção do código.
+                        O polimorfismo em programação, especialmente em linguagens orientadas a objetos como C++,
+                        oferece vários benefícios que contribuem para a flexibilidade do código, a capacidade de
+                        estender sistemas de classes e facilitar a manutenção do código. Aqui estão alguns desses
+                        benefícios:
                     </p>
+                    <p>
+
+
+                        Flexibilidade do Código:
+                        O polimorfismo permite que objetos de diferentes classes sejam tratados de maneira uniforme
+                        através de ponteiros ou referências da classe base. Isso proporciona flexibilidade ao código,
+                        permitindo que um único trecho de código manipule diferentes tipos de objetos sem a necessidade
+                        de conhecer detalhes específicos de cada classe derivada.
+                    </p>
+                    <p>
+                        Capacidade de Estender o Sistema de Classes:
+                        O polimorfismo facilita a extensão do sistema de classes. Ao adicionar novas classes derivadas,
+                        é possível estender o comportamento do programa sem modificar o código existente. Isso promove a
+                        reutilização do código e facilita a adição de novos recursos ao sistema.
+                    </p>
+
+                    <p>
+                        Encapsulamento e Abstração:
+                        O uso de polimorfismo contribui para o encapsulamento e a abstração de conceitos. A classe base
+                        pode fornecer uma interface abstrata, escondendo os detalhes de implementação das classes
+                        derivadas. Isso melhora a modularidade do código, tornando-o mais fácil de entender e manter.
+                    </p>
+
+                    <p>
+                        Polimorfismo de Tempo de Execução:
+                        O polimorfismo de tempo de execução (runtime polymorphism) é alcançado por meio de funções
+                        virtuais. Isso significa que a decisão sobre qual implementação específica chamar é tomada em
+                        tempo de execução. Isso permite uma adaptação dinâmica do comportamento do programa, o que é
+                        particularmente útil em situações em que as decisões só podem ser tomadas em tempo de execução.
+                    </p>
+
+                    <p>
+                        Manutenibilidade do Código:
+                        O polimorfismo contribui para a manutenibilidade do código, uma vez que alterações em uma classe
+                        derivada podem ser feitas sem impactar o código que interage com a classe base. Isso é valioso
+                        ao realizar atualizações ou modificações no sistema, pois reduz o acoplamento entre diferentes
+                        partes do código.
+                    </p>
+
+                    <p>
+
+                        Design Orientado a Objetos:
+                        O polimorfismo é uma característica fundamental da programação orientada a objetos. Ele promove
+                        um design mais modular e organizado, facilitando a modelagem de sistemas complexos por meio de
+                        hierarquias de classes e interfaces. Isso é especialmente benéfico ao trabalhar em projetos de
+                        grande escala.
+                    </p>
+
+                    <p>
+
+                        Facilita Testes e Simulações:
+                        O polimorfismo facilita a criação de testes e simulações. Pode-se usar classes derivadas que
+                        implementam interfaces específicas para testar componentes isoladamente, tornando mais fácil a
+                        verificação de funcionalidades individuais do sistema.
+                    </p>
+                    <p>
+                        Reusabilidade do Código:
+                        O polimorfismo permite a criação de código mais genérico e reutilizável. Classes base podem ser
+                        projetadas para serem aplicáveis a uma variedade de situações, e as classes derivadas podem
+                        fornecer implementações específicas conforme necessário. Isso promove a reutilização do código
+                        em diferentes contextos.
+                    </p>
+
+
                     <hgroup id="saudacoes">
                         <h2>3 Como usar o polimorfismo em situações do mundo real?</h2>
                     </hgroup>
