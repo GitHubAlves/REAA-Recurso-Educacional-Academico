@@ -48,6 +48,17 @@
                         gerais, refere-se à capacidade de um objeto assumir várias formas ou comportar-se de maneiras
                         diferentes em diferentes contextos.
                     </p>
+                    <p>
+                        Em resumo, polimorfismo na programação POO se refere a função membro da classe base que pode
+                        assumir diferentes formas
+                        dentro do objeto que a invoca. Po exemplo! a classe base <em>emitirSon()</em>, quando o objeto
+                        <em>gato</em> invocar
+                        a função membro será reescrita para emitir o som de um gato. Mas! Mas quando o objeto
+                        <em>vaca()</em> invocar a mesma função
+                        membro irpa emitir um <em>mooww</em>. Deu pra sacar? a mesma função membro pode assumir varias
+                        formas e para isto vamos analizar
+                        a nona pergunta.
+                    </p>
                     <hgroup id="saudacoes">
                         <h2>10 O que é polimorfismo em C++? (Invocação):</h2>
                     </hgroup>
@@ -75,12 +86,23 @@
                     </hgroup>
 
                     <p>
-                        Diferencie entre polimorfismo de tempo de compilação (também conhecido como polimorfismo
-                        estático) e
-                        polimorfismo de tempo de execução (polimorfismo dinâmico).
+                        Polimorfismo em tempo de compilação e
+                        Polimorfismo de tempo de execução.
                     </p>
-
-
+                    <p>
+                        A técnica de programação "Polimorfismo" é alcançada através de duas maneiras.
+                    </p>
+                    <p>
+                        Através de templates de funções, como chamamos de sobrecargas de funções, também sobrecargas de operadores.
+                        Isso tudo, podemos usar a mesma função para trabalhar com varias formas, ou seja, chamar a mesma função membro
+                        e hora trabalhar com qual tipo de valroes de entrada. Por exemplo! a função <em>soma()</em>, pode receber um ou dois inteiros
+                        como também pode receber um ou dois double ou até mesmo uma string. E dessa maneira o polimorfismo é alcançado em tempo de compilação.
+                    </p>
+                    <p>
+                        E não para por aí, se é preciso primeiro compilar para ter um polimorfismo bem escrito porque não alcançar polimorfismo
+                        em tempo de execução? Para isto é utilizado a palavra reservada <em>virtual</em> apenas na função membro da classe base.
+                        Exemplo: <em>int virtual makeSound();</em>
+                    </p>
                     <hgroup id="saudacoes">
                         <h2>8 O que são funções virtuais em C++?</h2>
                     </hgroup>
