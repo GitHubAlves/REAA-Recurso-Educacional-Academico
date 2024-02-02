@@ -26,6 +26,15 @@ div#interface {
     /*deslocamento lateral, deslocamento vertical, espalhamento da sombra, cor da sombra*/
 
 }
+div#interface_praticando {
+    width:1000px;
+    height: auto;
+    background-color: rgb(252, 252, 251);
+    margin: -40px auto 50px auto;
+    box-shadow: 0px 0px 10px black;
+    /*deslocamento lateral, deslocamento vertical, espalhamento da sombra, cor da sombra*/
+
+}
 
 video#not-supported br{
     background-color: rgb(228, 119, 17);
