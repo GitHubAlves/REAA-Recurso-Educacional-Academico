@@ -112,8 +112,13 @@
                         E não para por aí, se é preciso primeiro compilar para ter um polimorfismo bem escrito porque
                         não alcançar polimorfismo
                         em tempo de execução? Para isto é utilizado a palavra reservada <em>virtual</em> apenas na
-                        função membro da classe base.
-                        Exemplo: <em>int virtual makeSound();</em>
+                        função membro da classe base. lembrando que ao utilizar apalavra <em>virtual</em> não é
+                        possível sobrecargar a função virtual o mesmo número de argumentos deve ser respeitado.
+                        Exemplo: <pre>
+                            <code>
+                                    <em>virtual int makeSound();</em>
+                            </code>
+                        </pre>
                     </p>
                     <article id="MainTitle">
                         <hgroup id="saudacoes">
@@ -131,6 +136,11 @@
                         redefine uma função virtual, a versão da função na classe derivada será chamada quando a função
                         for invocada através de um ponteiro ou referência da classe base.
                     </p>
+                    <pre>
+                        <code>
+                                    <a href="Polimorfismo com eletronica.html">Estude o codigo elaborado..</a>
+                        </code>
+                    </pre>
                     <article id="MainTitle">
                         <hgroup id="saudacoes">
                             <h2>7 O que é uma função virtual pura?</h2>
@@ -206,9 +216,18 @@
                     <p>
                         <b>Uma classe abstrata em C++ é uma classe que contém pelo menos uma função virtual pura</b>.
                         Uma função virtual pura é uma função virtual que não possui uma implementação na classe base e é
-                        declarada com a sintaxe virtual tipo nome_funcao() = 0;. A presença de pelo menos uma função
+                        declarada com a sintaxe 
+                        <pre>
+                            <code>
+                                virtual tipo nome_funcao() = 0;
+                            </code>
+                        </pre>
+                        <p>
+                            A presença de pelo menos uma função
                         virtual pura torna a classe abstrata. Vale lembrar alguns pontos importantes relacionados a
                         classes abstratas e funções virtuais puras:
+                        </p>
+                             
                     </p>
                     <article id="MainTitle">
                         <hgroup id="saudacoes">
@@ -376,7 +395,7 @@
                     <article id="MainTitle">
                         <hgroup id="saudacoes">
                             <h2>Práticando....</h2>
-                            <a href="PraticandoPolimorfismo.html">teste</a>
+                            <a href="PraticandoPolimorfismo.html">Código</a>
                         </hgroup>
                     </article>
 
