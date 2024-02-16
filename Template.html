@@ -34,27 +34,95 @@
         </header>
         <section id="conf-aulas">
 
-        <div id="Aulas">
             <div id="Aulas">
-                <hgroup id="saudacoes">
-                    <h2>Modelo</h2>
-                </hgroup>
-                <br>
-                <br>
-                <p>
-                    Ao explorar ponteiros e endereços em C++, você pode fazer várias perguntas para aprofundar seu
-                    entendimento
-                    È muito importante que entenda bem sobre ponteiros, pois é um recurso das linguagens de médio á
-                    baixo nível
-                    que permite manipular a mamória do embarcado, além de deixar o programa mais rápido e menor mantendo
-                    a complexidade.
-                </p>
+                <div id="Aulas">
+                    <hgroup id="saudacoes">
+                        <h2>Templates</h2>
+                    </hgroup>
+                    <br>
+                    <br>
+                    <p>
+                        Quando você cria uma função normal em C++, ela é específica para um tipo de dado. Por exemplo,
+                        uma função que soma dois números inteiros não funcionará diretamente para números decimais. Aqui
+                        é onde entram os templates de funções.
+                        
+                    </p>
+                    <p>
+                        Com templates de funções, você pode criar uma função que funciona para diferentes tipos de
+                        dados. Por exemplo:
+                    </p>
+                    <pre>
+
+                        <code>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font>
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1, <font color="green"> NewType</font> numero2, <font color="green"> NewType</font> numero3, <font color="green"> NewType</font> numero4);
+                                
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font>
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1, <font color="green"> NewType</font> numero2, <font color="green"> NewType</font> numero3);
+                        
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font> 
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1, <font color="green"> NewType</font> numero2);
+                                
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font>
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1);
+                                
+                        int main()
+                        {
+                            cout  &lt;&lt;  "Hello REAA!"  &lt;&lt;  endl;
+                            <font color="purple"> imprimi</font>(99, 44, 3, 7);
+                            <font color="purple"> imprimi</font>(1, 8, 37);
+                            <font color="purple"> imprimi</font>(17, 66);
+                            <font color="purple"> imprimi</font>(1025);
+                                
+                                
+                                
+                                
+                            return 0;
+                        }
+                                
+                                
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font>
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1, <font color="green"> NewType</font> numero2, <font color="green"> NewType</font> numero3, <font color="green"> NewType</font> numero4)
+                        {
+                            cout &lt;&lt; "imprime: " &lt;&lt; numero1 &lt;&lt; '-' &lt;&lt; numero2 &lt;&lt; '-' &lt;&lt; numero3 &lt;&lt; '-' &lt;&lt; numero4 &lt;&lt; endl;
+                        }
+                                
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font>
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1, <font color="green"> NewType</font> numero2, <font color="green"> NewType</font> numero3)
+                        {
+                            cout &lt;&lt; "imprime: " &lt;&lt; numero1 &lt;&lt; '-' &lt;&lt; numero2 &lt;&lt; '-' &lt;&lt; numero3 &lt;&lt; endl;
+                        }
+                                
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font>  
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1, <font color="green"> NewType</font> numero2)
+                        {
+                            cout &lt;&lt; "imprime: " &lt;&lt; numero1 &lt;&lt; '-' &lt;&lt; numero2 &lt;&lt; endl;
+                        }
+                                
+                        <font color="blue">        
+                        template&lt;typename <font color="green"> <font color="green"> NewType</font></font>&gt;</font> 
+                        void <font color="purple"> imprimi</font>(<font color="green"> NewType</font> numero1)
+                        {
+                            cout &lt;&lt; "imprime: " &lt;&lt; numero1 &lt;&lt; endl;
+                        }
+                                
+                        </code>
+                    </pre>
+                </div>
             </div>
-        </div>
 
-        
+            testetestetestetestetesteteste
 
-    </section>
+        </section>
 
         <!--Rodapé-->
         <footer id="rodape">
