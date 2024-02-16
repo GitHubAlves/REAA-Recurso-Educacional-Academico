@@ -37,14 +37,18 @@
             <div id="Aulas">
                 <div id="Aulas">
                     <hgroup id="saudacoes">
-                        <h2>Templates</h2>
+                        <h2>Templates(de funções)</h2>
                     </hgroup>
                     <br>
                     <br>
                     <p>
+                        Templates são uma alternativa à sobrecarga de funções, quando envolve lógica de programação idênticas para varios tipos
+                        de entrada de dados.
+                    </p>
+                    <p>
                         Quando você cria uma função normal em C++, ela é específica para um tipo de dado. Por exemplo,
                         uma função que soma dois números inteiros não funcionará diretamente para números decimais. Aqui
-                        é onde entram os templates de funções.
+                        é onde entram os templates de funções, e até mesmo templates de classe que veremos no decorrer desta página.
                         
                     </p>
                     <p>
@@ -117,10 +121,33 @@
                                 
                         </code>
                     </pre>
+                    <figure class="Foto-AllanKay">                        
+                        <img src="codigo template.PNG" />
+                        <figcaption>
+                            <img src="Saida template imprimir.PNG" />
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
 
-            testetestetestetestetesteteste
+            <p>
+                Veja a sintaxe da construção de um template de funções, antes do protótipo da função e até mesmo antes da declaração do desenvolvimento 
+                da dela, é declarado a palavra reservada <em>template<typename newType></em> onde, template indica que a função será um template, typename
+                será um corringa para um tipo de dado, isso significa que o usuário irá colocar algum tipo de dados (<em>int, double, string..</em> ) e o compilador
+                vai identificar qual tipo de dado e substituir o <em>typename</em> em tempo de compilação. A variável <em>NewType</em> é um argumento qualquer
+                e eu poderia ter colocar qualquer coisa. 
+            </p>
+            <p>
+                Template não tem muito mistério, mas é importante fazer leitura de algumas obras para te conhecimento sobre boas práticas e dicas de uso 
+                em projetos reais.
+            </p>
+            <br>
+            <br>
+            <hgroup id="saudacoes">
+                <h2>Templates(de classes)</h2>
+            </hgroup>
+            <br>
+            <br>
 
         </section>
 
