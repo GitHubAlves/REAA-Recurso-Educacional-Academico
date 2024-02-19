@@ -37,38 +37,36 @@
             <div id="Aulas">
                 <div id="Aulas">
                     <hgroup id="saudacoes">
-<<<<<<< Updated upstream
-                        <h2>Templates(de funções)</h2>
-=======
-                        <h2>Templates</h2>
->>>>>>> Stashed changes
+                        <h2>Templates(de funções e templates de classe)</h2>                            
+                            
                     </hgroup>
                     <br>
                     <br>
                     <p>
-<<<<<<< Updated upstream
-                        Templates são uma alternativa à sobrecarga de funções, quando envolve lógica de programação idênticas para varios tipos
-                        de entrada de dados.
+                      Templates são uma alternativa à sobrecarga de funções, quando envolve
+                            lógica de programação idênticas para varios tipos de entrada de dados. </p>
+                            <p>
+                                Quando você cria uma função normal em C++, ela é específica para um tipo de dado. Por
+                                exemplo,
+                                uma função que soma dois números inteiros não funcionará diretamente para números
+                                decimais. Aqui
+                                é onde entram os templates de funções, e até mesmo templates de classe que veremos no
+                                decorrer desta página.
+
+                            </p>
+                            
+                            Quando você cria uma função normal em C++, ela é específica para um tipo de dado. Por
+                            exemplo,
+                            uma função que soma dois números inteiros não funcionará diretamente para números decimais.
+                            Aqui
+                            é onde entram os templates de funções.
                     </p>
-                    <p>
-                        Quando você cria uma função normal em C++, ela é específica para um tipo de dado. Por exemplo,
-                        uma função que soma dois números inteiros não funcionará diretamente para números decimais. Aqui
-                        é onde entram os templates de funções, e até mesmo templates de classe que veremos no decorrer desta página.
-                        
-                    </p>
-=======
-                        Quando você cria uma função normal em C++, ela é específica para um tipo de dado. Por exemplo,
-                        uma função que soma dois números inteiros não funcionará diretamente para números decimais. Aqui
-                        é onde entram os templates de funções.
-                    </p>
-                    
->>>>>>> Stashed changes
+
                     <p>
                         Com templates de funções, você pode criar uma função que funciona para diferentes tipos de
                         dados. Por exemplo:
                     </p>
-<<<<<<< Updated upstream
-                    <pre>
+                 <pre>
 
                         <code>
                         #include &lt;iostream&gt;
@@ -133,25 +131,30 @@
                         }
                                 
                         </code>
-                    </pre>
-                    <figure class="Foto-AllanKay">                        
-                        <img src="codigo template.PNG" />
-                        <figcaption>
-                            <img src="Saida template imprimir.PNG" />
-                        </figcaption>
-                    </figure>
+                        </pre>
+                        <figure class="Foto-AllanKay">
+                            <img src="codigo template.PNG" />
+                            <figcaption>
+                                <img src="Saida template imprimir.PNG" />
+                            </figcaption>
+                        </figure>
                 </div>
             </div>
 
             <p>
-                Veja a sintaxe da construção de um template de funções, antes do protótipo da função e até mesmo antes da declaração do desenvolvimento 
-                da dela, é declarado a palavra reservada <em>template<typename newType></em> onde, template indica que a função será um template, typename
-                será um corringa para um tipo de dado, isso significa que o usuário irá colocar algum tipo de dados (<em>int, double, string..</em> ) e o compilador
-                vai identificar qual tipo de dado e substituir o <em>typename</em> em tempo de compilação. A variável <em>NewType</em> é um argumento qualquer
-                e eu poderia ter colocar qualquer coisa. 
+                Veja a sintaxe da construção de um template de funções, antes do protótipo da função e até mesmo antes
+                da declaração do desenvolvimento
+                da dela, é declarado a palavra reservada <em>template<typename newType></em> onde, template indica que a
+                função será um template, typename
+                será um corringa para um tipo de dado, isso significa que o usuário irá colocar algum tipo de dados
+                (<em>int, double, string..</em> ) e o compilador
+                vai identificar qual tipo de dado e substituir o <em>typename</em> em tempo de compilação. A variável
+                <em>NewType</em> é um argumento qualquer
+                e eu poderia ter colocar qualquer coisa.
             </p>
             <p>
-                Template não tem muito mistério, mas é importante fazer leitura de algumas obras para te conhecimento sobre boas práticas e dicas de uso 
+                Template não tem muito mistério, mas é importante fazer leitura de algumas obras para te conhecimento
+                sobre boas práticas e dicas de uso
                 em projetos reais.
             </p>
             <br>
@@ -161,15 +164,18 @@
             </hgroup>
             <br>
             <br>
-<p>
-    Templates de classe tem o mesmo propósito de template de funções, não precisar rescrever varias classes com o mesmo algoritimo mas 
-    com diferentes entradas de tipos de dados.
-</p>
-<p>
-    Analise o código abaixo. cada objeto de mesma classe imprimi diferentes tipos de dados inclusive caracteres ou strings.
-    Determino uma quantidade X para o vetor de dados e um tipo para cada template. E finalmente chamo o objeto que imrpimi os dados.
-</p>
-<pre>
+            <p>
+                Templates de classe tem o mesmo propósito de template de funções, não precisar rescrever varias classes
+                com o mesmo algoritimo mas
+                com diferentes entradas de tipos de dados.
+            </p>
+            <p>
+                Analise o código abaixo. cada objeto de mesma classe imprimi diferentes tipos de dados inclusive
+                caracteres ou strings.
+                Determino uma quantidade X para o vetor de dados e um tipo para cada template. E finalmente chamo o
+                objeto que imrpimi os dados.
+            </p>
+            <pre>
     <code>
                         #include &lt;iostream&gt;
                         using namespace std;
@@ -279,25 +285,20 @@
         
     </code>
 </pre>
-<figure class="Foto-AllanKay">                        
-    <img src="Screenshot from 2024-02-17 15-29-03.png" />
-    <figcaption>
-        <img src="Screenshot from 2024-02-17 15-27-57.png" />
-    </figcaption>
-</figure>
-<p>
-    Este é um exemplo bastente simples para começar a entender sobre <em>Templates de funções e classes</em> muito útil 
-    em sistemas embarcados.
-</p>
-=======
+            <figure class="Foto-AllanKay">
+                <img src="Screenshot from 2024-02-17 15-29-03.png" />
+                <figcaption>
+                    <img src="Screenshot from 2024-02-17 15-27-57.png" />
+                </figcaption>
+            </figure>
+            <p>
+                Este é um exemplo bastente simples para começar a entender sobre <em>Templates de funções e classes</em>
+                muito útil
+                em sistemas embarcados.
 
 
-                </div>
-            </div>
+            </p>
 
-
-
->>>>>>> Stashed changes
         </section>
 
         <!--Rodapé-->

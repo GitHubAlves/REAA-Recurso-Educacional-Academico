@@ -173,6 +173,7 @@ figure.Foto-Relogio:hover figcaption {
     opacity: 1;
 }
 
+
 /*formatação do menu*/
 /*Sempre que for um id a chamada do estilo é um #*/
 /*foramtação menu e tudo que ul será*/
@@ -331,4 +332,38 @@ article#cabecalho{
     background-color: rgba(235, 234, 233, 0.4);
     padding: 5px 0px 5px 5px;
     margin: 10px -110px 10px 0px;
+}
+
+figure.saida_codigo {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 10px black;
+    width:  180%;
+    height: 180%;
+    margin: 20px auto 20px auto;
+}
+
+figure.saida_codigo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+/*Formatação de estilo para a figura do relogio*/
+figure.saida_codigo figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+
+}
+
+figure.saida_codigo:hover figcaption {
+    opacity: 1;
 }

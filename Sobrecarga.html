@@ -38,6 +38,8 @@
                 <div id="Aulas">
                     <hgroup id="saudacoes">
                         <h2>Sobrecarga (de funções e de operadores)</h2>
+                        <br>
+                        <h2>...Sobrecarga de funções </h2>
                     </hgroup>
                     <br>
                     <br>
@@ -48,9 +50,12 @@
                         possíveis tipos de dados
                         de entrada seja uma função.
                     </p>
-                    Diferentemente de um template que com apenas uma função template é possível combinar tipos de dados
-                    de entrada.
-                    Mas não deixa de ser um ótimo recurso ou técnica de programação. Veja o exemplo a baixo.
+                    <p>
+                        Diferentemente de um template que com apenas uma função template é possível combinar tipos de
+                        dados
+                        de entrada.
+                        Mas não deixa de ser um ótimo recurso ou técnica de programação. Veja o exemplo a baixo.
+                    </p>
                 </div>
                 <pre>
                     <code>
@@ -58,33 +63,33 @@
                         using namespace std;
 
                         
-                        int      soma(int, int);      <font colo="gray">//Função soma que recebe dois inteiros</font>
-                        double   soma(double, double);<font colo="gray">//Função soma que recebe dois decimais</font>
-                        int      soma(int, int, int); <font colo="gray">//Função soma que recebe três inteiros</font>
+                        int      soma(int, int);      <font color="gray">//Função soma que recebe dois inteiros</font>
+                        double   soma(double, double);<font color="gray">//Função soma que recebe dois decimais</font>
+                        int      soma(int, int, int); <font color="gray">//Função soma que recebe três inteiros</font>
 
 
                         int main()
                         {
                             cout &lt;&lt; "Hello REAA!"&lt;&lt; endl;
-                            cout&lt;&lt;"soma com 2 int:"&lt;&lt;soma(2, 3)    &lt;&lt;endl;<font colo="blue">//Retorna a soma de dois </font>
-                            cout&lt;&lt;"soma com 3 int:"&lt;&lt;soma(2, 3, 4) &lt;&lt;endl;<font colo="gray">//Retorna a soma de três inteiros</font>
-                            cout&lt;&lt;"soma com 2 double:"&lt;&lt;soma(8.2, 1.9)&lt;&lt;endl;<font colo="gray">//Retorna a soma de dois decimais</font>
+                            cout&lt;&lt;"soma com 2 int:"&lt;&lt;soma(2, 3)    &lt;&lt;endl;<font color="gray">//Retorna a soma de dois inteiros</font>
+                            cout&lt;&lt;"soma com 3 int:"&lt;&lt;soma(2, 3, 4) &lt;&lt;endl;<font color="gray">//Retorna a soma de três inteiros</font>
+                            cout&lt;&lt;"soma com 2 double:"&lt;&lt;soma(8.2, 1.9)&lt;&lt;endl;<font color="gray">//Retorna a soma de dois decimais</font>
 
                             return 0;
                         }
 
-                        <font colo="gray">//sobrecarga de dois inteiros</font>
+                        <font color="gray">//sobrecarga de dois inteiros</font>
                         int      soma(int A, int B)
                         {
                             return A+B;
                         }
-                        <font colo="gray">//sobrecarga de dois double</font>
+                        <font color="gray">//sobrecarga de dois double</font>
 
                         double   soma(double A, double B)
                         {
                             return A+B;
                         }
-                        <font colo="gray">//sobrecarga de três inteiros</font>
+                        <font color="gray">//sobrecarga de três inteiros</font>
 
                         int      soma(int A, int B, int C)
                         {
@@ -94,6 +99,44 @@
                     </code>
             </pre>
             </div>
+
+            <p>
+                Sobre carga de funções é isso, mais um recurso da linguagem C++ que permite a reutilização de código
+            </p>
+
+            <hgroup id="saudacoes">
+                <h2>...Sobrecarga de operadores </h2>
+            </hgroup>
+            <br>
+            <br>
+            <p>
+                Sobrecargas de operadores em C++, é um recurso adicional para expandir a linguagem, facilitar a leitura
+                e operação
+                de objetos criados por você. Podemos dizer que é mais cosmético trabalhar com sobrecarga de operadores,
+                mas facilita muito
+                em simplificar e gerenciar memória.
+            </p>
+            <p>
+                De forma mais simplificada, sobrecarregar um operador, é usar um operador que tem a função nativa de
+                operar com variáveis
+                simples e fazer elel operar com estruturas ou objetos. Por exeplo, è possível multiplicar duas variáveis
+                A e B do tipo inteiro ou double.
+                Mas! não dá para multiplicar dois objetos espacias(que recebem três parâmetros).
+            </p>
+            <p>
+                Por isso! Sobrecarregar o operador (*) para multiplicar dois objetos é uma prática que simplifica
+                significativamente a construção, reutilização e manutenção do programa. Essa abordagem proporciona uma
+                expressividade aprimorada ao código, tornando-o mais intuitivo e conciso.
+
+                Abaixo estão exemplos simples que evidenciam a utilidade dessa técnica. Eu como estudante encorrajo a analisar,
+                modificar e estudar esses e outros exemplos para aprofundar a compreensão sobre como a sobrecarga de operadores
+                pode ser aplicada de maneira eficaz. Essa prática não apenas facilita o desenvolvimento, mas também
+                contribui para interfaces mais claras e código mais legível, resultando em um programa mais robusto e de
+                fácil manutenção.
+            </p>
+            <a href="SobrecargaOperadoresCodigos.html">Programa de atualização de hora, minutos e segundos</a><br>
+            <a href="SobrecargaOperadoresCodigosProdutoEscalar.html">Produto escalar por meio da sobrecarga do operador *</a><br>
+            <a href="SobrecargaOperadoresCodigosSomaDeDoisPontos.html">Somar dois pontos no espaço</a>
 
 
 
