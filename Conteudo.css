@@ -293,12 +293,7 @@ ul#Lista-Aulas li#Sobrecarga {
     background-repeat: no-repeat;
 }
 
-ul#Lista-Aulas li#Operadores {
-    background: url('operadores.png');
-    background-position: 50% 50%;
-    background-size: 200px 200px;
-    background-repeat: no-repeat;
-}
+
 
 ul#Lista-Aulas li#I-O-de-fluxos {
     background: url('IO-Fluxo.PNG');
