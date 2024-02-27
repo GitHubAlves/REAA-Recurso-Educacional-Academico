@@ -129,7 +129,7 @@
                     <p>
                         Para contornar este problema de perder dados por causa do espaço você pode
                         usar <em>cin.get(vetor_caracteres, Tam_buffer)</em>. Por exemplo <br>
-                        <pre>
+                    <pre>
                             <code>
                                 int sizeBuffer=20;
                                 char nome[15];
@@ -149,20 +149,162 @@
                         </figcaption>
                     </figure>
                     <p>
-                        Existem inúmeros membros de dados para serem explorados como entrada e saída de dados na linguagem C++
-                        . Sugiro visitar a lista completa de de arquivos de cabeçalho da biblioteca padrão do C++. Aqui deixei apenas um 
-                        uma breve sobre como organizar os dados para dar entrada pelo teclado e como organizar os dados na saida.
+                        Existem inúmeros membros de dados para serem explorados como entrada e saída de dados na
+                        linguagem C++
+                        . Sugiro visitar a lista completa de de arquivos de cabeçalho da biblioteca padrão do C++. Aqui
+                        deixei apenas um
+                        uma breve sobre como organizar os dados para dar entrada pelo teclado e como organizar os dados
+                        na saida.
                     </p>
                     <p>
-                        Visite o site oficial da Microsoft, na pagina <em>Arquivos de cabeçalho da biblioteca padrão C++</em> <br>
-                        <a href="https://learn.microsoft.com/pt-br/cpp/standard-library/what-a-stream-is?view=msvc-170">Arquivos de cabeçalho da biblioteca padrão C++</a>
+                        Visite o site oficial da Microsoft, na pagina <em>Arquivos de cabeçalho da biblioteca padrão
+                            C++</em> <br>
+                        <a href="https://learn.microsoft.com/pt-br/cpp/standard-library/what-a-stream-is?view=msvc-170">Arquivos
+                            de cabeçalho da biblioteca padrão C++</a>
                     </p>
                     <br>
                     <hgroup id="saudacoes">
-                        <h2>Output (saida de dados)</h2>                        
+                        <h2>Output (saida de dados)</h2>
                     </hgroup>
                     <br>
+                    <p>
+                        Assim como temos o objeto <em>cin</em> que manipula o fluxo de entrada através dos membros de
+                        dados
+                        <em>get(), getline()..entre outros</em>. Temos também os manipuladores de fluxo de dados de
+                        saída.
+                        Eles ficilitam a organização dos dados na tela como <br><br>
+                        <font color="gray">-Formatar a largura de campo.</font> <br>
+                        <font color="gray">-Configurar dados com precisão de casas decimais.</font> <br>
+                        <font color="gray">-Esvaziar fluxos e inserir uma nova linha do fluxo de saída</font>.
+                        <font color="gray">-Incluir um caracter nulo no fluxo de saída e pular espaço em branco no fluxo de entrada.</font>
+                        <br><br>
+                        Veremos alguns desses muito usuais para facilitar na
+                        desenvoltura dos nossos programas.
+                    </p>
+                    <p>
+                        Para determinar as casa de precisão de um número usamos o membro de dado <em>setprecision()</em>
+                        da classe padrão <em>iomanip</em> em conjunto com o minpulador de fluxo <em>fixed</em> do <em>iostream</em>.
+                        <pre>
+                            <code>
+                                #include &lt; iostream &gt;
+                                using namespace std;//fixed está em iostream
+                                #include &lt; iomanip &gt;
+                                using std::setprecision;
+                                
+                                int main()
+                                {
+                                    cout &gt;&gt; "Hello REAA!" &gt;&gt; endl;
+                                    cout &gt;&gt; <font color="blue">fixed</font> &gt;&gt; endl;
+                                    double pi=3.24519966;
+                                    cout &gt;&gt; "Pi: " &gt;&gt;<font color="blue"> setprecision(2)</font>  &gt;&gt; pi &gt;&gt; endl;
+                                
+                                    return 0;
+                                }
+                            </code>
+                        </pre>
+                        <figure class="Foto-AllanKay">
+                            <img src="Screenshot from 2024-02-25 14-00-38.png" />
+                            <figcaption>
+                                <img src="Screenshot from 2024-02-25 14-01-58.png" />
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <P>
+                     Podemos formatar a largura do campo, usando o meombro de dado <em>setw()</em>
+                    para isso incluímos o <em>iomanip</em> e destacamos a inclusão <em>using std::setw;</em>
+                    
+                    </P>
+                    <p>
+                        O setw() desloca desloca a ultima casa do numero para a próxima casa livre, caso tiver ocupada
+                        não surgirá o efeito. Veja o exemplo. 
 
+                        <pre>
+                            <code>
+                                #include &lt iostream &gt
+                                using namespace std;//fixed está em iostream
+                                #include &lt iomanip &gt
+                                using std::setprecision;
+                                <font color="blue">using std::setw;</font>
+                                
+                                int main()
+                                {
+                                    cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                                
+                                    int A= 123456789,
+                                        B= 123456789,
+                                        C= 123456789,
+                                        D= 123456789,
+                                        E= 123456789,
+                                        F= 123456789;
+                                
+                                    cout &lt;&lt; <font color="blue">setw(9)</font>  &lt;&lt; A &lt;&lt; endl;//vEJA QUE A NONA CASA ESTÁ NO MESMO LUGAR NOCONSOLE
+                                    cout &lt;&lt; <font color="blue">setw(10)</font> &lt;&lt; B &lt;&lt; endl;//AQUI JÁ COMEÇA A DESLOCAR PARA A DÉCIMA CASA
+                                    cout &lt;&lt; <font color="blue">setw(11)</font> &lt;&lt; C &lt;&lt; endl;//NATURAL
+                                    cout &lt;&lt; <font color="blue">setw(12)</font> &lt;&lt; D &lt;&lt; endl;//NATURAL
+                                    cout &lt;&lt; <font color="blue">setw(13)</font> &lt;&lt; E &lt;&lt; endl;//NATURAL
+                                    cout &lt;&lt; <font color="blue">setw(14)</font> &lt;&lt; F &lt;&lt; endl;//NATURAL
+                                                                
+                                    return 0;
+                                }
+                                
+                            </code>
+                        </pre>
+                        <figure class="Foto-AllanKay">
+                            <img src="Screenshot from 2024-02-25 14-32-44.png" />
+                            <figcaption>
+                                <img src="Screenshot from 2024-02-25 14-33-38.png" />
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        È possível criar seu próprio monipulador de fluxo de dados, personalizar as próprias funções
+                        nos dá muitas vantagens.
+                    </p>
+                    <p>
+                        Veremos que com o ostream podemos fazer isso da seguinte forma.
+                        <pre>
+                            <code>
+                                #include &lt;iostream&gt;
+                                using namespace std;//fixed está em iostream
+                                                    //ostream está em iostream
+                                
+                                #include &lt;iomanip&gt;
+                                using std::setw;
+                                
+                                ostream &tab(ostream &manip);
+                                
+                                
+                                int main()
+                                {
+                                    cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                                
+                                    char A='A',
+                                         B='B',
+                                         C='C';
+                                    cout &lt;&lt; A &lt;&lt; tab &lt;&lt; B &lt;&lt; tab &lt;&lt; C &lt;&lt; endl;
+                                
+                                    return 0;
+                                }
+                                
+                                
+                                <font color="blue">ostream &tab(ostream &manip)</font>
+                                {
+                                    return manip &gt;&gt; "\t" ; <font color="gray">//insere a tabulação no endereço de manip e retorna a tabulação</font>
+                                    <font color="gray">//Você pode modificar com outros caracteres</font>
+                                    <font color="gray">//Ex: '\a que é um bip sonoro'</font>
+                                    <font color="gray">//Ex: '\n nova linhas'</font>
+                                    <font color="gray">//Ex: "============"</font>
+                                }
+                                
+                            </code>
+                        </pre>
+                        <figure class="Foto-AllanKay">
+                            <img src="Screenshot from 2024-02-25 15-03-05.png" />
+                            <figcaption>
+                                <img src="Screenshot from 2024-02-25 15-03-48.png" />
+                            </figcaption>
+                        </figure>
+                    </p>
                 </div>
             </div>
 
