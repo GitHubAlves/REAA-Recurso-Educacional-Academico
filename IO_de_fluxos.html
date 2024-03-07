@@ -61,7 +61,7 @@
                     </hgroup>
                     <p>
                         O <em>cin</em> é um objeto do iostream que extrai dados do teclado usando o o perador de
-                        extração de fluxo <em>>></em>
+                        inserção de fluxo <em>>></em>
                         <br>Ex: <br>
                         cin >> var_int;
                     </p>
@@ -107,7 +107,7 @@
                     </figure>
                     <p>
                         Utilizar o <em>cin</em> para capturar uma cadeia de caracteres ocasiona na perda de
-                        dados se caso contiver um espaço inserido. Por exemplo <br>
+                        dados se caso ter um espaço inserido. Por exemplo <br>
                     <pre>
                             <code>
                                 char c[15];
@@ -151,7 +151,7 @@
                     <p>
                         Existem inúmeros membros de dados para serem explorados como entrada e saída de dados na
                         linguagem C++
-                        . Sugiro visitar a lista completa de de arquivos de cabeçalho da biblioteca padrão do C++. Aqui
+                        . Sugiro visitar a lista completa de arquivos de cabeçalho da biblioteca padrão do C++. Aqui
                         deixei apenas um
                         uma breve sobre como organizar os dados para dar entrada pelo teclado e como organizar os dados
                         na saida.
@@ -193,10 +193,10 @@
                                 
                                 int main()
                                 {
-                                    cout &gt;&gt; "Hello REAA!" &gt;&gt; endl;
-                                    cout &gt;&gt; <font color="blue">fixed</font> &gt;&gt; endl;
+                                    cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                                    cout &lt;&lt; <font color="blue">fixed</font> &lt;&lt; endl;
                                     double pi=3.24519966;
-                                    cout &gt;&gt; "Pi: " &gt;&gt;<font color="blue"> setprecision(2)</font>  &gt;&gt; pi &gt;&gt; endl;
+                                    cout &lt;&lt; "Pi: " &lt;&lt;<font color="blue"> setprecision(2)</font>  &lt;&lt; pi &lt;&lt; endl;
                                 
                                     return 0;
                                 }
@@ -210,12 +210,12 @@
                         </figure>
                     </p>
                     <P>
-                     Podemos formatar a largura do campo, usando o meombro de dado <em>setw()</em>
+                     Podemos formatar a largura do campo, usando o membro de dado <em>setw()</em>
                     para isso incluímos o <em>iomanip</em> e destacamos a inclusão <em>using std::setw;</em>
                     
                     </P>
                     <p>
-                        O setw() desloca desloca a ultima casa do numero para a próxima casa livre, caso tiver ocupada
+                        O setw() desloca desloca a ultima casa do número para a próxima casa livre, caso tiver ocupada
                         não surgirá o efeito. Veja o exemplo. 
 
                         <pre>
@@ -289,7 +289,7 @@
                                 
                                 <font color="blue">ostream &tab(ostream &manip)</font>
                                 {
-                                    return manip &gt;&gt; "\t" ; <font color="gray">//insere a tabulação no endereço de manip e retorna a tabulação</font>
+                                    return manip &lt;&lt; "\t" ; <font color="gray">//insere a tabulação no endereço de manip e retorna a tabulação</font>
                                     <font color="gray">//Você pode modificar com outros caracteres</font>
                                     <font color="gray">//Ex: '\a que é um bip sonoro'</font>
                                     <font color="gray">//Ex: '\n nova linhas'</font>
