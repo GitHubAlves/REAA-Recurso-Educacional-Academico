@@ -176,15 +176,17 @@
                         <font color="gray">-Formatar a largura de campo.</font> <br>
                         <font color="gray">-Configurar dados com precisão de casas decimais.</font> <br>
                         <font color="gray">-Esvaziar fluxos e inserir uma nova linha do fluxo de saída</font>.
-                        <font color="gray">-Incluir um caracter nulo no fluxo de saída e pular espaço em branco no fluxo de entrada.</font>
+                        <font color="gray">-Incluir um caracter nulo no fluxo de saída e pular espaço em branco no fluxo
+                            de entrada.</font>
                         <br><br>
                         Veremos alguns desses muito usuais para facilitar na
                         desenvoltura dos nossos programas.
                     </p>
                     <p>
                         Para determinar as casa de precisão de um número usamos o membro de dado <em>setprecision()</em>
-                        da classe padrão <em>iomanip</em> em conjunto com o minpulador de fluxo <em>fixed</em> do <em>iostream</em>.
-                        <pre>
+                        da classe padrão <em>iomanip</em> em conjunto com o minpulador de fluxo <em>fixed</em> do
+                        <em>iostream</em>.
+                    <pre>
                             <code>
                                 #include &lt; iostream &gt;
                                 using namespace std;//fixed está em iostream
@@ -202,23 +204,23 @@
                                 }
                             </code>
                         </pre>
-                        <figure class="Foto-AllanKay">
-                            <img src="Screenshot from 2024-02-25 14-00-38.png" />
-                            <figcaption>
-                                <img src="Screenshot from 2024-02-25 14-01-58.png" />
-                            </figcaption>
-                        </figure>
+                    <figure class="Foto-AllanKay">
+                        <img src="Screenshot from 2024-02-25 14-00-38.png" />
+                        <figcaption>
+                            <img src="Screenshot from 2024-02-25 14-01-58.png" />
+                        </figcaption>
+                    </figure>
                     </p>
                     <P>
-                     Podemos formatar a largura do campo, usando o membro de dado <em>setw()</em>
-                    para isso incluímos o <em>iomanip</em> e destacamos a inclusão <em>using std::setw;</em>
-                    
+                        Podemos formatar a largura do campo, usando o membro de dado <em>setw()</em>
+                        para isso incluímos o <em>iomanip</em> e destacamos a inclusão <em>using std::setw;</em>
+
                     </P>
                     <p>
                         O setw() desloca desloca a ultima casa do número para a próxima casa livre, caso tiver ocupada
-                        não surgirá o efeito. Veja o exemplo. 
+                        não surgirá o efeito. Veja o exemplo.
 
-                        <pre>
+                    <pre>
                             <code>
                                 #include &lt iostream &gt
                                 using namespace std;//fixed está em iostream
@@ -249,12 +251,12 @@
                                 
                             </code>
                         </pre>
-                        <figure class="Foto-AllanKay">
-                            <img src="Screenshot from 2024-02-25 14-32-44.png" />
-                            <figcaption>
-                                <img src="Screenshot from 2024-02-25 14-33-38.png" />
-                            </figcaption>
-                        </figure>
+                    <figure class="Foto-AllanKay">
+                        <img src="Screenshot from 2024-02-25 14-32-44.png" />
+                        <figcaption>
+                            <img src="Screenshot from 2024-02-25 14-33-38.png" />
+                        </figcaption>
+                    </figure>
                     </p>
                     <p>
                         È possível criar seu próprio monipulador de fluxo de dados, personalizar as próprias funções
@@ -262,7 +264,7 @@
                     </p>
                     <p>
                         Veremos que com o ostream podemos fazer isso da seguinte forma.
-                        <pre>
+                    <pre>
                             <code>
                                 #include &lt;iostream&gt;
                                 using namespace std;//fixed está em iostream
@@ -298,17 +300,26 @@
                                 
                             </code>
                         </pre>
-                        <figure class="Foto-AllanKay">
-                            <img src="Screenshot from 2024-02-25 15-03-05.png" />
-                            <figcaption>
-                                <img src="Screenshot from 2024-02-25 15-03-48.png" />
-                            </figcaption>
-                        </figure>
+                    <figure class="Foto-AllanKay">
+                        <img src="Screenshot from 2024-02-25 15-03-05.png" />
+                        <figcaption>
+                            <img src="Screenshot from 2024-02-25 15-03-48.png" />
+                        </figcaption>
+                    </figure>
                     </p>
                 </div>
             </div>
-
-
+            <p>
+                Com isso já podemos criar alguma coisa útil para treinar entrada e saída de dados formatados. Sabendo
+                dimencionar largura de campo,
+                preenchimento de campo vazio e determinar a precisão de números decimais, já está muito bem evoluído.
+            </p>
+            <p>
+                Confira o código que eu escrevi
+                para demostrar a empregabilidade desses comandos e como organizados podem ficar as informaçoes
+                vindo de um barramento serial por exemplo.
+            </p>
+            <a href="https://github.com/GitHubAlves/Exercise-in-Program-C-Com-Classe/tree/main/PI_SAida_Fluxo">Ingresso para o CINE-MA</a>
 
         </section>
 
