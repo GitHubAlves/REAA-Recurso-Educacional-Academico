@@ -7,7 +7,7 @@
     <title>REAA</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" type='text/css' href="_CSS/Conteudo.css">
+    <link rel="stylesheet" type='text/css' href="Estilo.css">
 
     <script src='main.js'></script>
 
@@ -19,7 +19,7 @@
 
         <header id="cabecalho">
             <hgroup id="logo-cabecalho">
-                <img src="_IMAGENS/REAA-Logo001.PNG">
+                <img src="REAA-Logo001.PNG">
 
             </hgroup>
 
@@ -32,15 +32,60 @@
                 </ul>
             </nav>
         </header>
-        <div id="Aulas">
-            <p>
-                [TEXTO]
-            </p>
-        </div>
+        <section id="conf-aulas">
 
-        
+            <div id="Aulas">
+                <div id="Aulas">
+                    <hgroup id="saudacoes">
+                        <h2>Alocação dinâmica de memória e o operador new e delete</h2>
+                    </hgroup>
+                    <br>
+                    <br>
+                    <p>
+                        Imagine que você está planejando uma festa surpresa. Você sabe que vai precisar de algumas
+                        cadeiras, mesas e comida, mas não sabe quantas pessoas vão aparecer. Aqui está a questão: você
+                        reserva espaço suficiente para a festa inteira, mesmo que algumas pessoas possam não aparecer?
+                        Ou você prefere ter um plano flexível e reservar apenas o que precisa conforme mais pessoas
+                        confirmam presença?
+                    </p>
+                    <p>
+                        A alocação dinâmica de memória em C++ é como planejar essa festa. Em vez de reservar todos os
+                        lugares e recursos antecipadamente, você vai ajustando conforme as confirmações chegam. Se mais
+                        pessoas confirmam presença, você consegue mais cadeiras e comida. Se menos pessoas aparecem do
+                        que o esperado, você pode devolver o excesso de recursos. Isso mantém o seu planejamento
+                        eficiente e flexível.
+                    </p>
+                    <p>
+                        Portanto, a alocação dinâmica de memória em C++ é como organizar uma festa surpresa, onde você
+                        reserva espaço e recursos à medida que precisa, para garantir que todos se divirtam sem
+                        desperdício.
+                    </p>
+                    <p>
+                        Repare o código abaixo. Para alocar dinamicamente em C++ deve declarar um ponteiro para um tipo, depois
+                        usar o operador <em>new</em> em conjunto com o tipo de dado seguido de colchetes para determinar quanto de memória 
+                        vai ter ser alocado com aquele tipo de dado. 
+                    </p>
+                    <p>
+                        Quando o programa chegar no final, deve-se desalocar este espaço usando o operador <em>delete[] ponteiro</em>.
+                    </p>
+                    <pre>
+                        <code>
+                            int *P_inteiro=<font color="blue">new</font> int[4];<font color="gray">//Aloca memoria para 4 inteiros</font>
+                            double *P_double=<font color="blue">new</font> double[4];<font color="gray">//Aloca memoria para 4 double</font>
+                            Aluno *P_struct=<font color="blue">new</font> Aluno[4];<font color="gray">//Aloca memoria para 4 estruturas do tipo Aluno</font>
+
+                            delete[] P_inteiro;
+                            delete[] P_double;
+                            delete[] P_struct;
+
+                        </code>
+                    </pre>
+                </div>
+            </div>
 
 
+
+        </section>
 
         <!--Rodapé-->
         <footer id="rodape">
