@@ -224,7 +224,7 @@
     com zeros.
 </p>
     <p>
-        Se inverter o comentário, o operador nothrow proteje contra vazamento de memória.
+        Se inverter o comentário, o operador <font color="green">std::nothrow</font> proteje contra vazamento de memória.
     </p>
 <pre>
     <code>
@@ -252,16 +252,37 @@
                                 for(int i=0; i<30; i++)
                                 {
                                     cout &lt;&lt; "valor: " &lt;&lt; vetor[i] &lt;&lt; endl;
-                                }
+                                }                            
                             
-                            
-                                delete[]vetor;
-                            
+                                delete[]vetor;                            
                                 return 0;
                             }
+
             
     </code>
 </pre>
+<figure class="Foto-AllanKay">
+    <img src="Cod_Alocacaon_nothrou.PNG" />
+    <figcaption>
+        <img src="ResultadoAlocacaon_nothrou.PNG" />        
+    </figcaption>
+</figure>
+<p>
+    Vamos agora descomentar a linha do ponteiro para o vetor, exatamente onde está o objeto <em>std::nothrou</em>
+    . Também vamos descomentar o laço <em>for()</em> para caso a alocacao for bem sucedida, e por fim devemos comentar a linha abaixo 
+    de onde foi coloado o <em>std::nothrou</em>
+</p>
+<figure class="Foto-AllanKay">
+    <img src="TestandoVazamentoMemoria.png" />
+    <figcaption>
+        <img src="erroAlocacaoMemoria.PNG" />        
+    </figcaption>
+</figure>
+<p>
+    Este é um exemplo básico de proteger a memória contra vazamentos, é importante usar este tipo de mecanismo 
+    em sistemas embarcados, pois a memória é limitada.
+</p>
+
 
         </section>
 
