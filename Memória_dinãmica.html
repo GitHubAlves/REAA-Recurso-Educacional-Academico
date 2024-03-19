@@ -61,23 +61,51 @@
                         desperdício.
                     </p>
                     <p>
-                        Repare o código abaixo. Para alocar dinamicamente em C++ deve declarar um ponteiro para um tipo, depois
-                        usar o operador <em>new</em> em conjunto com o tipo de dado seguido de colchetes para determinar quanto de memória 
-                        vai ter ser alocado com aquele tipo de dado. 
+                        Repare o código abaixo. Para alocar dinamicamente em C++ deve declarar um ponteiro para um tipo,
+                        depois
+                        usar o operador <em>new</em> em conjunto com o tipo de dado seguido de colchetes para determinar
+                        quanto de memória
+                        vai ter ser alocado com aquele tipo de dado.
                     </p>
                     <p>
-                        Quando o programa chegar no final, deve-se desalocar este espaço usando o operador <em>delete[] ponteiro</em>.
+                        Quando o programa chegar no final, deve-se desalocar este espaço usando o operador <em>delete[]
+                            ponteiro</em>.
                     </p>
                     <pre>
                         <code>
-                            int *P_inteiro=<font color="blue">new</font> int[4];<font color="gray">//Aloca memoria para 4 inteiros</font>
-                            double *P_double=<font color="blue">new</font> double[4];<font color="gray">//Aloca memoria para 4 double</font>
-                            Aluno *P_struct=<font color="blue">new</font> Aluno[4];<font color="gray">//Aloca memoria para 4 estruturas do tipo Aluno</font>
 
-                            delete[] P_inteiro;
-                            delete[] P_double;
-                            delete[] P_struct;
+                            #include <iostream>
+                            using namespace std;
+                            <font color="gray">//=====================
+                            //- estrutura--</font>
+                            struct Aluno
+                            {
+                                string anome;
+                                int matricula;
+                                int notas[3];
+                                
+                            };
+                            <font color="gray">//=====================
+                            //- Fim da estrutura--
+                            </font>
+                                
+                            int main()
+                            {
 
+                            cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                            int *P_inteiro   = <font color="blue">new</font> int[4];   <font color="gray">//Aloca memoria para 4 inteiros</font>
+                            double *P_double = <font color="blue">new</font> double[4];<font color="gray">//Aloca memoria para 4 double</font>
+                            Aluno *P_struct  = <font color="blue">new</font> Aluno[4]; <font color="gray">//Aloca memoria para 4 estruturas do tipo Aluno</font>
+                            <font color="gray">//Insersão de valores para P_inteiro</font>
+                            <font color="gray">//Insersão de valores para P_double</font>
+                            <font color="gray">//Insersão de valores para P_struct</font>
+                            delete[] P_inteiro;<font color="gray">//Naturalmente</font>
+                            delete[] P_double; <font color="gray">//Naturalmente</font>
+                            delete[] P_struct; <font color="gray">//Naturalmente</font>
+
+                            return 0;
+                        }
+                        
                         </code>
                     </pre>
                 </div>
