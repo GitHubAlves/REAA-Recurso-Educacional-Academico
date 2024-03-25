@@ -7,7 +7,7 @@
     <title>REAA</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" type='text/css' href="_CSS/Conteudo.css">
+    <link rel="stylesheet" type='text/css' href="Estilo.css">
 
     <script src='main.js'></script>
 
@@ -19,7 +19,7 @@
 
         <header id="cabecalho">
             <hgroup id="logo-cabecalho">
-                <img src="_IMAGENS/REAA-Logo001.PNG">
+                <img src="REAA-Logo001.PNG">
 
             </hgroup>
 
@@ -32,15 +32,80 @@
                 </ul>
             </nav>
         </header>
-        <div id="Aulas">
-            <p>
-                [TEXTO]
-            </p>
-        </div>
+        <section id="conf-aulas">
 
-        
+            <div id="Aulas">
+                <div id="Aulas">
+                    <hgroup id="saudacoes">
+                        <h2>Processamento de Arquivos .txt e .csv</h2>
+                    </hgroup>
+                    <br>
+                    <br>
+                    <p>
+                        Essa parte de Processamento ou manipulação de arquivos, digo eu que é a parte mais prazerosa
+                        desta jornada. Pois é possível armazenar
+                        dados mesmo depois de fechar o programa. Também é possivél leros dados armazenados nele.
+                    </p>
+                    <p>
+                        A sintaxe da manipulação de arquivos é o que segue a baixo, e com esta pequena construção você
+                        pode criar outros arranjos
+                        de programa.
+                    </p>
+                    <p>
+                        Primeiramente, vou começar armazenando num arquivo .txt, que é um bloco qualquer, depois vou
+                        armazenas num arquivo .csv que é a planilha do Exel.
+                    </p>
+                    <pre>
+                    <code>
+                            #include &lt;iostream&gt;
+                            using namespace std;
+                            
+                            #include &lt;cstdlib&gt;
+                            using std::exit;
+                            
+                            #include &lt;iomanip&gt;
+                            using std::setw;
+                            
+                            #include &lt;fstream&gt;
+                            using std::ofstream;//para trabalhar com arquivos
+                            
+                            
+                            int main()
+                            {
+                                <font color="gray">//Boas vindas</font>
+                                cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                            
+                                float resultado=60;
+                                <font color="gray">//Gera o arquivo se caso não existir.</font>
+                                <font color="green">ofstream Arquivo("Arquivo.txt", ios::out);</font>
+                                <font color="gray">//Verifica se o arquivo foi aberto com exidô</font>
+                                if(!Arquivo)
+                                {
+                                    cout &lt;&lt; "Sem sucesso ao abrir o arquivo:" &lt;&lt; endl;
+                                    exit(1);<font color="gray">//Aborta o programa, se caso não rolar.</font>
+                                }
+                            
+                                cout &lt;&lt; "Arquivo aberto com sucesso: " &lt;&lt; endl;
+                            
+                                Arquivo &lt;&lt;resultado &lt;&lt; setw(3) &lt;&lt; "Hz" &lt;&lt; "Padrão Brazil." &lt;&lt;endl;
+                                Arquivo &lt;&lt; "======================";
+                            
+                                Arquivo.close();<font color="gray">//Fecha o arquivo</font>
+                                while(1);
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+                <p>
+                    Usamos o objeto <em>ofstream</em> para especificar a saida de dados indo direto para um arquivo, ou seja, <font color="gray"><em>Out File Stream</em></font>
+                </p>
+                </div>
+            </div>
 
 
+
+        </section>
 
         <!--Rodapé-->
         <footer id="rodape">
